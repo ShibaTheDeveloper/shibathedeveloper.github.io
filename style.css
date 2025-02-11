@@ -1,12 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Ubuntu', Arial, sans-serif;
     text-align: center;
-    background-color: rgba(244, 244, 244, 0.1); /* Fixed transparency */
-    color: #ffffff; /* Ensures text color applies globally */
+    background-color: rgba(244, 244, 244, 0.1);
+    color: #ffffff;
 }
 
 h1, p {
-    color: #ffffff; /* White text, but ensure background is dark enough */
+    color: #ffffff;
 }
 
 button {
@@ -16,6 +16,7 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 button:hover {
