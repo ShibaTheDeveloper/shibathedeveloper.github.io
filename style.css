@@ -1,15 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f41c;
+    background-color: rgba(244, 244, 244, 0.1); /* Fixed transparency */
+    color: #ffffff; /* Ensures text color applies globally */
 }
 
-h1 {
-    color: #ffffff;
-}
-
-p {
-    color: #ffffff;
+h1, p {
+    color: #ffffff; /* White text, but ensure background is dark enough */
 }
 
 button {
