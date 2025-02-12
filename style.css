@@ -24,9 +24,9 @@ button:hover {
 }
 
 a {
-    color: rgb(0, 120, 218);
+    color: rgb(0, 140, 255);
 }
 
 a:hover {
-    color: rgb(0, 140, 255);
+    color: rgb(0, 120, 218);
 }
