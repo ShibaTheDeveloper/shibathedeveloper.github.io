@@ -52,7 +52,7 @@ function spawnStar() {
     stars.push(new ShootingStar());
 }
 
-for (let i = 0; i < 800; i++) {
+for (let i = 0; i < (canvas.width * canvas.height / 3000); i++) {
    spawnStar()
 }
 
