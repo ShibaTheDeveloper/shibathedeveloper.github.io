@@ -1,29 +1,34 @@
 /* Background styling */
 body {
     font-family: 'Ubuntu', Arial, sans-serif;
-    background: url('/Assets/background.jpg') no-repeat center center fixed; /* Replace with your background */
+    background: url('/Assets/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center the main content */
+    justify-content: center;
+    align-items: center; /* Ensures centering */
+    min-height: 100vh;
 }
 
 /* Main content column */
 .container {
-    width: 60%; /* Adjust width as needed */
+    width: 60%;
     max-width: 900px;
-    min-height: 600vh; /* Full height */
-    background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent effect */
+    height: 100vh; /* Full viewport height */
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column; /* Ensures content flows naturally */
 }
 
 /* Headings and text */
 h1, p {
     color: #ffffff;
     text-align: center;
+    margin: 0;
 }
 
 /* Buttons */
