@@ -25,9 +25,9 @@ class ShootingStar {
     update() {
         this.x += Math.cos((this.angle * Math.PI) / 180) * this.speed;
         this.y += Math.sin((this.angle * Math.PI) / 180) * this.speed;
-        this.opacity -= 0.003; // Gradually fade
+        this.opacity -= 0.001; // Gradually fade
 
-        if (this.opacity <= 0) {
+        if (this.opacity <= 0 || this.x > canvas.width / 2) {
             this.reset();
         }
     }
@@ -52,7 +52,7 @@ function spawnStar() {
     stars.push(new ShootingStar());
 }
 
-for (let i = 0; i < (canvas.width * canvas.height / 3000); i++) {
+for (let i = 0; i < (canvas.width * canvas.height / 6000); i++) {
    spawnStar()
 }
 
