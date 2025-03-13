@@ -12,11 +12,6 @@ const PAGES = {
             <button onclick="loadPage('socials')">socials</button>
             <button onclick="loadPage('mywork')">my works</button>
         </div>
-
-        <small>
-            <br>
-            the favicon is a picutre of sunny from omori
-        </small>
     `,
     mywork: `
         <h1>my works</h1>
@@ -35,11 +30,6 @@ const PAGES = {
             <button onclick="loadPage('index')">back</button>
             <button onclick="loadPage('socials')">socials</button>
         </div>
-
-        <small>
-            <br>
-            the favicon is a picutre of sunny from omori
-        </small>
     `,
     socials: `
         <h1>socials</h1>
@@ -55,11 +45,6 @@ const PAGES = {
             <button onclick="loadPage('index')">back</button>
             <button onclick="loadPage('mywork')">my works</button>
         </div>
-
-        <small>
-            <br>
-            the favicon is a picutre of sunny from omori
-        </small>
     `
 }
 
