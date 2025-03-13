@@ -1,22 +1,14 @@
-/* Background styling */
 body {
     font-family: 'Ubuntu', Arial, sans-serif;
-    background: url('/Assets/oshathumbnail.png') no-repeat center center fixed; /* Replace with your background */
-    background-size: cover;
+    text-align: center;
+    background-color: rgb(43, 43, 43);
     color: #ffffff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Center the main content */
 }
 
-/* Headings and text */
 h1, p {
     color: #ffffff;
-    text-align: center;
 }
 
-/* Buttons */
 button {
     background-color: #007BFF;
     color: white;
@@ -25,18 +17,15 @@ button {
     cursor: pointer;
     border-radius: 5px;
     font-family: 'Ubuntu', sans-serif;
-    transition: 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-/* Links */
 a {
     display: inline-block;
     color: rgb(0, 140, 255);
-    text-decoration: none;
 }
 
 a:hover {
