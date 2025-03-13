@@ -1,28 +1,32 @@
+/* Background styling */
 body {
     font-family: 'Ubuntu', Arial, sans-serif;
-    text-align: center;
-    background-color: rgb(43, 43, 43);
+    background: url('/Assets/background.jpg') no-repeat center center fixed; /* Replace with your background */
+    background-size: cover;
     color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the main content */
 }
 
+/* Main content column */
 .container {
-    background: rgba(0, 0, 0, 0.8);
+    width: 60%; /* Adjust width as needed */
+    max-width: 900px;
+    min-height: 100vh; /* Full height */
+    background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent effect */
     padding: 20px;
-    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 50%;
-    min-width: 300px;
 }
 
+/* Headings and text */
 h1, p {
     color: #ffffff;
+    text-align: center;
 }
 
+/* Buttons */
 button {
     background-color: #007BFF;
     color: white;
@@ -38,6 +42,7 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Links */
 a {
     display: inline-block;
     color: rgb(0, 140, 255);
