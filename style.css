@@ -10,16 +10,6 @@ body {
     justify-content: center; /* Center the main content */
 }
 
-/* Main content column */
-.container {
-    width: 60%; /* Adjust width as needed */
-    max-width: 900px;
-    min-height: 100vh; /* Full height */
-    background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent effect */
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 /* Headings and text */
 h1, p {
     color: #ffffff;
