@@ -1,5 +1,8 @@
 body {
     background-image: url(/Assets/background.png);
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
     font-family: 'Ubuntu', Arial, sans-serif;
     text-align: center;
     background-color: rgb(58, 58, 58);
