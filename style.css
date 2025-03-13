@@ -11,9 +11,13 @@ body {
 }
 
 .container {
-    width: 60%; /* Adjust this to control side spacing */
-    max-width: 800px; /* Prevents it from getting too wide on large screens */
-    background-color: rgba(255, 255, 255, 0.1); /* Slight transparency effect */
+    width: 60%;
+    max-width: 800px;
+    height: 100vh; /* Makes it fill the entire viewport height */
+    display: flex;
+    flex-direction: column; /* Ensures content flows properly */
+    justify-content: center; /* Centers content vertically */
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -21,6 +25,14 @@ body {
 
 h1, p {
     color: #ffffff;
+}
+
+/* Adjust the container for the buttons */
+.button-container {
+    display: flex;
+    flex-direction: row; /* Align buttons in a row */
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 20px;
 }
 
 button {
@@ -31,6 +43,8 @@ button {
     cursor: pointer;
     border-radius: 5px;
     font-family: 'Ubuntu', sans-serif;
+    display: inline-block; /* Ensures buttons stay in a row */
+    margin: 5px; /* Adds spacing between buttons */
 }
 
 button:hover {
