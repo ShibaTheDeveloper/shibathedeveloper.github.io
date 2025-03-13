@@ -26,8 +26,18 @@ body {
     border-radius: 10px;
 }
 
-h1, p, button {
+h1 {
     background-color: rgb(6, 6, 6);
+    color: rgb(232, 232, 232);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    margin: 5px;
+}
+
+p {
+    background-color: rgb(17, 17, 17);
     color: rgb(232, 232, 232);
     border: none;
     padding: 10px 20px;
