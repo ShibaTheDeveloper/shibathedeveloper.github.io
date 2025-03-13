@@ -27,7 +27,7 @@ class ShootingStar {
         this.y += Math.sin((this.angle * Math.PI) / 180) * this.speed;
         this.opacity -= 0.001; // Gradually fade
 
-        if (this.opacity <= 0 || this.x > canvas.width / 2) {
+        if (this.opacity <= 0) {
             this.reset();
         }
     }
