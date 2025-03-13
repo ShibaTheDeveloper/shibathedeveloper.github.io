@@ -1,7 +1,7 @@
 /* Background styling */
 body {
     font-family: 'Ubuntu', Arial, sans-serif;
-    background: url('/Assets/background.jpg') no-repeat center center fixed; /* Replace with your background */
+    background: url('/Assets/oshathumbnail.png') no-repeat center center fixed; /* Replace with your background */
     background-size: cover;
     color: #ffffff;
     margin: 0;
