@@ -61,10 +61,9 @@ body {
 .project-container {
     background-color: rgb(17, 17, 17);
     display: flex;
-    justify-content: flex-start;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Aligns children to the left on the X-axis */
+    align-items: center; /* Centers children vertically on the Y-axis */
     margin: 5px;
 }
 
