@@ -17,7 +17,7 @@ const PAGES = {
 
         <p>
             im shiba, a game dev from poland mainly working with luau in roblox studio since 2018. <br>
-            im always trying to improve my coding skills and learn new languages. <br>
+            i specialize in lua, and luau in roblox studio. (go to interests tab for details)<br>
             you can check out my projects, or contact me using the buttons above. <br>
         </p>
     `,
@@ -61,6 +61,46 @@ const PAGES = {
             steam: <a href="https://steamcommunity.com/id/shibahh" target="_blank">shibahh</a> <br>
         </p>
     `,
+    interests: `
+        <h1>interests</h1>
+
+        <h2>hobbies:</h2>
+        <p>
+            basically my only hobby is coding, which i have been doing since 2018! <br>
+            the languages i use are: lua, luau, and python (not that good at it) <br>
+        </p>
+
+        <h2>games:</h2>
+        <p>
+            my taste in games is all over the place, and i haven't really figured out what game genres i like and which ones i don't like <br><br>
+
+            games i'm been a fan of: <br>
+            -RDR2 <br>
+            -Ultrakill <br>
+            -Spore <br>
+            -Forsaken <br><br>
+
+            games i used to be a fan of: <br>
+            -The Battle Bricks <br>
+            -TDS <br>
+            -The Wild West <br>
+        </p>
+
+        <h2>music:</h2>
+        <p>
+            basically the only music genres i listen to are rap and video game OST<br><br>
+
+            fav artists: <br>
+            -kendrick lamar <br>
+            -kanye west (yes i know this man is psychotic, i just like graduation) <br>
+            -eminem <br>
+            -micheal jackson <br><br>
+            
+            fav game osts: <br>
+            -forsaken <br>
+            -ultrakill <br>
+        </p>
+    `,
 }
 
 var higher = `
@@ -70,6 +110,7 @@ var higher = `
     <div class="button-container">
         <button onclick="loadPage('index')">home</button>
         <button onclick="loadPage('socials')">socials</button>
+        <button onclick="loadPage('interests')">interests</button>
         <button onclick="loadPage('mywork')">my works</button>
     </div>
 `;
@@ -77,7 +118,7 @@ var higher = `
 var lower = `
     <small class="special-small">
         <br>
-         the favicon is a picutre of sunny from omori
+        <!-- the favicon is a picutre of sunny from omori-->
     </small>
 `
 

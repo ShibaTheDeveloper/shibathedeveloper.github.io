@@ -48,6 +48,7 @@ body {
     z-index: 1;
     position: absolute;
     box-sizing: border-box;
+    overflow: auto;
 }
 
 .button-container {
