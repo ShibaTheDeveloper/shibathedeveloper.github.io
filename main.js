@@ -65,6 +65,7 @@ const PAGES = {
 
 var higher = `
     <h2>QUOTE OF THE DAY: "<span id="quote-text">Loading...</span>" <span id="quote-author">Loading...</span></h2>
+    <br><br>
 
     <div class="button-container">
         <button onclick="loadPage('index')">home</button>
