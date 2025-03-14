@@ -11,13 +11,13 @@ const PAGES = {
     mywork: `
         <h1>my works</h1>
 
-        <img src="Assets/embed.png></img>
+        <img src="/Assets/embed.png></img>
         <p>
             <a href="https://www.roblox.com/games/16634562549/TBB-TARPG-REWORK-OPEN-ALPHA">TBB:TARPG</a> <br>
             a fan RP game of <a href="https://www.roblox.com/games/10834586502/The-Battle-Bricks">Tumore's The Battle Bricks</a>, my first ever successful project
         </p>
 
-        <img src="Assets/embed.png></img>
+        <img src="/Assets/embed.png></img>
         <p>
             <a href="https://www.roblox.com/games/88623920231246/Teapot-Tumble">Teapot Tumble</a> <br>
             a spin on roblox's classic falling teapots of doom game by clockwork
