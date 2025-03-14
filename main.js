@@ -52,7 +52,7 @@ const PAGES = {
            </a></img> <br> 
 
             <p>
-                Merge Boxes, a merging game where you.. merge boxes. probably my simplest projects
+                Merge Boxes, a merging game where you.. merge boxes. probably one of my simplest projects
             </p>
         </div>
 
