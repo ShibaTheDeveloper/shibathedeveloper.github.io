@@ -146,7 +146,7 @@ a:hover {
     cursor: crosshair;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 680px) {
     body {
         flex-direction: column;
         align-items: stretch;
