@@ -20,10 +20,41 @@ const PAGES = {
             i specialize in lua, and luau in roblox studio. (go to interests tab for details)<br>
             you can check out my projects, or contact me using the buttons above. <br>
         </p>
+
+        <br>
+
+        <small>
+            while working on this website i CTRL + R'd discord way more times than i'd like to admit
+        </small>
     `,
-    mywork: `
-        <h1>my works</h1>
-        <p>click the images to get redirected to the project</p>
+    projects: `
+        <h1>projects</h1>
+        <p>
+            now that i'm making this tab, i've realised how little projects i have actually finished and bothered to publish.
+            you can click on the images to get redirected.
+        </p>
+
+        <small>projects are sorted from newest to oldest</small> <br>
+
+        <div class="project-container">
+           <a href="https://www.roblox.com/games/88623920231246/Teapot-Tumble">
+                <img src="/Assets/teapot-tumble.png" width = 150 height = 150>
+           </a></img> <br> 
+
+            <p>
+                Teapot Tumble, a spin on roblox's classic falling teapots of doom game by clockwork. the game is an alpha, so dont expect much.
+            </p>
+        </div>
+
+        <div class="project-container">
+           <a href="https://www.roblox.com/games/15795590655/Merge-Boxes">
+                <img src="/Assets/merge-boxes.png" width = 150 height = 150>
+           </a></img> <br> 
+
+            <p>
+                Merge Boxes, a merging game where you.. merge boxes. probably my simplest projects
+            </p>
+        </div>
 
         <div class="project-container">
             <a href="https://www.roblox.com/games/16634562549/TBB-TARPG-REWORK-OPEN-ALPHA">
@@ -35,23 +66,15 @@ const PAGES = {
                 it has had 4 versions which can all be played in the not yet finished <a href="https://www.roblox.com/games/94032704926982/TARPG-ERA">tarpg era game</a>
             </p>
         </div>
-
-        <div class="project-container">
-           <a href="https://www.roblox.com/games/88623920231246/Teapot-Tumble">
-                <img src="/Assets/teapot-tumble.png" width = 150 height = 150>
-           </a></img> <br> 
-
-            <p>
-                Teapot Tumble, a spin on roblox's classic falling teapots of doom game by clockwork. the game is an alpha, so dont expect much.
-            </p>
-        </div>
     `,
-    socials: `
-        <h1>socials</h1>
+    links: `
+        <h1>links</h1>
 
-        <p>would've had perfect quintouple shibahh usernames if some kid didn't take shibahh on roblox :(</p>
-        <small>ignore how yt acc has an extra H, i own the shibahh handle but i just gotta transfer it from my alt to main</small>
-        <br><br>
+        <p>
+            I'm pretty active on everything besides yt (i have nothing to upload) <br>
+            please do not send me friend requests on roblox, and steam. <br>
+            instead of friending me on discord just send me a message. <br>
+        </p>
 
         <p>
             discord: shibahh <br>
@@ -66,7 +89,7 @@ const PAGES = {
 
         <h2>hobbies:</h2>
         <p>
-            basically my only hobby is coding, which i have been doing since 2018! <br>
+            my only hobby is coding, which i have been doing since 2018! <br>
             the languages i use are: lua, luau, and python (not that good at it) <br>
         </p>
 
@@ -78,7 +101,10 @@ const PAGES = {
             -RDR2 <br>
             -Ultrakill <br>
             -Spore <br>
-            -Forsaken <br><br>
+            -Forsaken <br>
+            -Outer Wilds (i haven't even completed the game LOL)<br>
+            -Valorant<br>
+            -CS:GO (not cs2, i hate it)<br><br>
 
             games i used to be a fan of: <br>
             -The Battle Bricks <br>
@@ -109,9 +135,9 @@ var higher = `
 
     <div class="button-container">
         <button onclick="loadPage('index')">home</button>
-        <button onclick="loadPage('socials')">socials</button>
+        <button onclick="loadPage('links')">links</button>
         <button onclick="loadPage('interests')">interests</button>
-        <button onclick="loadPage('mywork')">my works</button>
+        <button onclick="loadPage('projects')">projects</button>
     </div>
 `;
 
