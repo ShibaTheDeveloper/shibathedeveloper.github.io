@@ -37,7 +37,7 @@ body {
 }
 
 .container {
-    width: 90%; /* Adjust width for mobile */
+    width: 60%;
     max-width: 800px;
     height: 100%;
     display: flex;
@@ -48,7 +48,6 @@ body {
     z-index: 1;
     position: absolute;
     box-sizing: border-box;
-    overflow-y: auto; /* Prevents content overflow */
 }
 
 .button-container {
@@ -63,10 +62,9 @@ body {
     background-color: rgb(17, 17, 17);
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; /* Aligns children to the left on the X-axis */
-    align-items: center; /* Centers children vertically on the Y-axis */
+    justify-content: flex-start;
+    align-items: center;
     margin: 5px;
-    flex-wrap: wrap; /* Allows wrapping of content on smaller screens */
 }
 
 br {
@@ -141,70 +139,4 @@ a {
 a:hover {
     color: rgb(0, 120, 218);
     cursor: crosshair;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column; /* Stack elements vertically on small screens */
-        justify-content: flex-start; /* Align top content */
-        align-items: flex-start;
-    }
-
-    .container {
-        width: 100%; /* Take full width on mobile */
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.5rem; /* Smaller font size for mobile */
-    }
-
-    h2 {
-        font-size: 0.9rem; /* Smaller font size for mobile */
-    }
-
-    p {
-        font-size: 0.9rem; /* Smaller font size for mobile */
-    }
-
-    button {
-        padding: 8px 16px; /* Adjust button padding for smaller screens */
-    }
-
-    .project-container {
-        flex-direction: column; /* Stack project containers vertically on mobile */
-        width: 100%;
-    }
-
-    .special-small {
-        font-size: 0.8rem; /* Smaller text for small screens */
-    }
-}
-
-/* Extra small screens (portrait phones) */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.2rem; /* Further reduce font size */
-    }
-
-    h2 {
-        font-size: 0.8rem; /* Further reduce font size */
-    }
-
-    p {
-        font-size: 0.8rem; /* Further reduce font size */
-    }
-
-    button {
-        padding: 6px 12px; /* Further reduce padding */
-    }
-
-    .container {
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
-
-    .special-small {
-        font-size: 0.7rem; /* Further reduce small text size */
-    }
 }
