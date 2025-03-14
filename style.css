@@ -82,6 +82,17 @@ h1 {
     font-size: 2rem;
 }
 
+h2 {
+    background-color: rgb(6, 6, 6);
+    color: rgb(232, 232, 232);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    margin: 5px;
+    font-size: 1rem;
+}
+
 p {
     background-color: rgb(17, 17, 17);
     color: rgb(232, 232, 232);
@@ -106,6 +117,14 @@ button {
 
 small {
     color: rgba(232, 232, 232, 0.4);
+}
+
+.special-small {
+    color: rgba(232, 232, 232, 0.4);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); 
 }
 
 button:hover {
