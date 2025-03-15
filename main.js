@@ -27,7 +27,7 @@ const PAGES = {
             while working on this website i CTRL + R'd discord way more times than i'd like to admit
         </small>
 
-        <img src="/Assets/doge.gif" width = 700 height = 375" class="gif"></img>
+        <img src="/Assets/doge.gif" width = 600 height = 325" class="gif"></img>
     `,
     projects: `
         <h1>projects</h1>
