@@ -86,7 +86,7 @@ const PAGES = {
             steam: <a href="https://steamcommunity.com/id/shibahh" target="_blank">shibahh</a> <br>
         </p>
 
-        <img src="/Assets/holy-moly.gif" width = 300 height = 300" class="gif"></img>
+        <img src="/Assets/holy-moly.gif" width = 225 height = 225" class="gif"></img>
     `,
     interests: `
         <h1>interests</h1>
