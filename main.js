@@ -26,6 +26,10 @@ const PAGES = {
         <small>
             while working on this website i CTRL + R'd discord way more times than i'd like to admit
         </small>
+
+        <br><br><br>
+
+        <img src="/Assets/doge.gif"></img>
     `,
     projects: `
         <h1>projects</h1>
@@ -104,7 +108,8 @@ const PAGES = {
             -Forsaken <br>
             -Outer Wilds (i haven't even completed the game LOL)<br>
             -Valorant<br>
-            -CS:GO (not cs2, i hate it)<br><br>
+            -CS:GO (not cs2, i hate it)<br>
+            -Windowkill<br><br>
 
             games i used to be a fan of: <br>
             -The Battle Bricks <br>
