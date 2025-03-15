@@ -133,8 +133,11 @@ small {
 }
 
 .gif {
-    justify-self: center;
-    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 button:hover {
