@@ -29,7 +29,7 @@ const PAGES = {
 
         <br><br><br>
 
-        <img src="/Assets/doge.gif" width = 394 height = 222></img>
+        <img src="/Assets/doge.gif" width = 472 height = 266></img>
     `,
     projects: `
         <h1>projects</h1>
