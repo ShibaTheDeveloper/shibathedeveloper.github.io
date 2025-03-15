@@ -132,6 +132,11 @@ small {
     transform: translateX(-50%); 
 }
 
+.gif {
+    justify-self: center;
+    align-self: center;
+}
+
 button:hover {
     background-color: rgb(40, 40, 40);
 }
