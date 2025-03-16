@@ -197,7 +197,7 @@ function viewPost(postId) {
     const postContent = `
         <h1>${post.title}</h1>
         <div class="post-content">${post.content}</div>
-        <button onclick="loadPage('blog')">Back to Blog</button>
+        <button onclick="loadPage('blog')">back to blog</button>
     `;
     document.querySelector(".container").innerHTML = higher + postContent + lower;
 
