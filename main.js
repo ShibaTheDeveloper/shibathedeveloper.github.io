@@ -132,6 +132,19 @@ const PAGES = {
             -ultrakill <br>
         </p>
     `,
+
+    blog: `
+        <h1>blog</h1>
+        <p>
+            ill post anything from game leaks to random memes, basically everything that's on my mind will go here.
+        </p>
+
+        <h2>posts:</h2>
+
+        <div class="blog-posts">
+            <!-- Buttons will be dynamically added here -->
+        </div>
+    `
 }
 
 var higher = `
@@ -142,6 +155,7 @@ var higher = `
         <button onclick="loadPage('links')">links</button>
         <button onclick="loadPage('interests')">interests</button>
         <button onclick="loadPage('projects')">projects</button>
+        <button onclick="loadPage('blog')">blog</button>
     </div>
 `;
 
@@ -152,10 +166,40 @@ var lower = `
     </small>
 `
 
+const posts = {
+    1: {
+        title: "first ever post!!",
+        content: `
+            <p>
+                this is my first ever blog post made on this website. currently the system is pretty bad because: <br>
+                i do not have any other way to create blog posts than editing the main.js file. <br><br>
+
+                i think you can tell why this is bad. i'll create some sort of blog post creation page for myself soon. <br><br>
+
+                the system rn is very clunky, but i can do stuff like add images/gifs <br>
+                <img src="/Assets/merge-boxes.png" width = 150 height = 150></img>
+                <img src="/Assets/doggo-on-da-swing.gif" class="gif"></img>
+
+                even <button>buttons!</button>
+            </p>
+        `,
+    },
+};
+
 // Function to get a hash of the current date
 function getTodayHash() {
     const today = new Date();
     return today.toDateString(); // Returns the date string, i.e., "Thu Mar 14 2025"
+}
+
+function viewPost(postId) {
+    const post = posts[postId];
+    const postContent = `
+        <h1>${post.title}</h1>
+        <div class="post-content">${post.content}</div>
+        <button onclick="loadPage('blog')">Back to Blog</button>
+    `;
+    document.querySelector(".container").innerHTML = higher + postContent + lower;
 }
 
 function getQuoteIndexForToday() {
@@ -179,8 +223,51 @@ function getQuoteOfTheDay() {
 
 function loadPage(page) {
     document.querySelector(".container").innerHTML = higher + PAGES[page] + lower;
+
+    if (page === 'blog') {
+        // Using setTimeout to ensure it's executed after content rendering
+        setTimeout(() => {
+            displayBlogPosts();
+        }, 0);
+    }
+    
     displayQuote();
 }
+
+function displayBlogPosts() {
+    const blogContainer = document.querySelector(".blog-posts");
+    blogContainer.innerHTML = ''; // Clear the container before adding buttons
+
+    // Loop through each post in the posts object
+    Object.keys(posts).forEach(postId => {
+        const post = posts[postId];
+        const postButton = document.createElement('button');
+        postButton.textContent = post.title;
+        postButton.onclick = function() {
+            viewPost(postId); // View post when clicked
+        };
+
+        blogContainer.appendChild(postButton); // Append the button to the container
+    });
+}
+
+function loadPage(page) {
+    document.querySelector(".container").innerHTML = higher + PAGES[page] + lower;
+
+    // Check if the page is 'blog', and wait for the container to exist
+    if (page === 'blog') {
+        const interval = setInterval(() => {
+            const blogContainer = document.querySelector(".blog-posts");
+            if (blogContainer) {
+                displayBlogPosts(); // Display the posts
+                clearInterval(interval); // Stop checking once the container is found
+            }
+        }, 100); // Check every 100ms until the container is available
+    }
+
+    displayQuote(); // Display the quote
+}
+
 
 function displayQuote() {
     const randomQuote = getQuoteOfTheDay();
