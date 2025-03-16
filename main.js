@@ -178,7 +178,7 @@ const posts = {
 
                 the system rn is very clunky, but i can do stuff like add images/gifs <br>
                 <img src="/Assets/merge-boxes.png" width = 150 height = 150></img>
-                <img src="/Assets/doggo-on-da-swing.gif" class="gif"></img>
+                <img src="/Assets/doggo-on-da-swing.gif" class="gif"></img><br><br>
 
                 even <button>buttons!</button>
             </p>
