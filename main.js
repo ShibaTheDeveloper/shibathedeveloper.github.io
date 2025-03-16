@@ -200,6 +200,8 @@ function viewPost(postId) {
         <button onclick="loadPage('blog')">Back to Blog</button>
     `;
     document.querySelector(".container").innerHTML = higher + postContent + lower;
+
+    displayQuote()
 }
 
 function getQuoteIndexForToday() {
@@ -219,19 +221,6 @@ function getQuoteIndexForToday() {
 function getQuoteOfTheDay() {
     const index = getQuoteIndexForToday();
     return quotesTable[index];
-}
-
-function loadPage(page) {
-    document.querySelector(".container").innerHTML = higher + PAGES[page] + lower;
-
-    if (page === 'blog') {
-        // Using setTimeout to ensure it's executed after content rendering
-        setTimeout(() => {
-            displayBlogPosts();
-        }, 0);
-    }
-    
-    displayQuote();
 }
 
 function displayBlogPosts() {
