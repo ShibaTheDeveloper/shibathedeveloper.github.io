@@ -27,7 +27,7 @@ const PAGES = {
             while working on this website i CTRL + R'd discord way more times than i'd like to admit
         </small>
 
-        <img src="/Assets/doge.gif" class="gif"></img>
+        <img src="/Assets/space-dog.gif" class="gif"></img>
     `,
     projects: `
         <h1>projects</h1>
@@ -86,7 +86,7 @@ const PAGES = {
             steam: <a href="https://steamcommunity.com/id/shibahh" target="_blank">shibahh</a> <br>
         </p>
 
-        <img src="/Assets/holy-moly.gif" class="gif"></img>
+        <img src="/Assets/doggo-on-da-swing.gif" class="gif"></img>
     `,
     interests: `
         <h1>interests</h1>
