@@ -8,7 +8,8 @@ const quotesTable = [
     { text: "Don’t just think of the technology, think of the emotions it can evoke.", author: "Hironobu Sakaguchi" },
     { text: "The most successful games are the ones that surprise you, make you laugh, or make you feel something.", author: "Kenji Inafune" },
     { text: "Games are meant to be shared. Not only with your friends but with the world.", author: "Jade Raymond" },
-    { text: "A game is about making players feel good, feel that they’ve learned something, and have fun.", author: "Satoru Iwata" }
+    { text: "A game is about making players feel good, feel that they’ve learned something, and have fun.", author: "Satoru Iwata" },
+    { text: "Peantis, haha!", author: "Me"}
 ];
 
 const PAGES = {
@@ -80,8 +81,8 @@ const PAGES = {
 
         <p>
             discord: shibahh <br>
-            roblox: <a href="https://www.roblox.com/users/2456801075/profile" target="_blank">ssshibah</a> (uid: 2456801075) <br>
-            yt: <a href="https://www.youtube.com/@shibahhh" target="_blank">@shibahh</a> <br>
+            roblox: <a href="https://www.roblox.com/users/2456801075/profile" target="_blank">ssshibah</a><br>
+            yt: <a href="https://www.youtube.com/@shibahh" target="_blank">@shibahh</a> <br>
             github: <a href="https://github.com/shibahhh" target="_blank">shibahh</a> <br>
             steam: <a href="https://steamcommunity.com/id/shibahh" target="_blank">shibahh</a> <br>
         </p>
@@ -93,33 +94,40 @@ const PAGES = {
 
         <h2>hobbies:</h2>
         <p>
-            my only hobby is coding, which i have been doing since 2018! <br>
+            one of my favorite hobbies is coding, which i have been doing since 2018! <br>
             the languages i use are: lua, luau, and python (not that good at it) <br>
         </p>
 
         <h2>games:</h2>
         <p>
-            my taste in games is all over the place, and i haven't really figured out what game genres i like and which ones i don't like <br><br>
+            my taste in games is all over the place, and i haven't really figured out what game genres i like and which ones i don't like <br>
+            (in no particular order)<br><br>
 
-            games i'm been a fan of: <br>
+            my favorite game as of 5/14/2025: Entry Point: Freelancer's Cut
+
+            games i'm a fan of: <br>
             -RDR2 <br>
             -Ultrakill <br>
             -Spore <br>
             -Forsaken <br>
+            -Clash of Clans (i love coc)<br>
+            -Entry Point (freelancer's cut and the og)<br>
             -Outer Wilds (i haven't even completed the game LOL)<br>
             -Valorant<br>
-            -CS:GO (not cs2, i hate it)<br>
+            -CS:GO (not cs2, that thing is unfinished)<br>
             -Windowkill<br><br>
 
             games i used to be a fan of: <br>
             -The Battle Bricks <br>
             -TDS <br>
-            -The Wild West <br>
+            -The Wild West (it's actually been growing on me recently cause of the v4 release) <br>
+            -Clash Royale (p2w dogshit) <br>
         </p>
 
         <h2>music:</h2>
         <p>
-            basically the only music genres i listen to are rap and video game OST<br><br>
+            basically the only music genres i listen to are rap and video game OST<br>
+            (in no particular order)<br><br>
 
             fav artists: <br>
             -kendrick lamar <br>
@@ -131,19 +139,6 @@ const PAGES = {
             -forsaken <br>
             -ultrakill <br>
         </p>
-    `,
-
-    blog: `
-        <h1>blog</h1>
-        <p>
-            ill post anything from game leaks to random memes, basically everything that's on my mind will go here.
-        </p>
-
-        <h2>posts:</h2>
-
-        <div class="blog-posts">
-            <!-- Buttons will be dynamically added here -->
-        </div>
     `
 }
 
@@ -159,49 +154,10 @@ var higher = `
     </div>
 `;
 
-var lower = `
-    <small class="special-small">
-        <br>
-        <!-- the favicon is a picutre of sunny from omori-->
-    </small>
-`
-
-const posts = {
-    1: {
-        title: "first ever post!!",
-        content: `
-            <p>
-                this is my first ever blog post made on this website. currently the system is pretty bad because: <br>
-                i do not have any other way to create blog posts than editing the main.js file. <br><br>
-
-                i think you can tell why this is bad. i'll create some sort of blog post creation page for myself soon. <br><br>
-
-                the system rn is very clunky, but i can do stuff like add images/gifs <br>
-                <img src="/Assets/merge-boxes.png" width = 150 height = 150></img>
-                <img src="/Assets/doggo-on-da-swing.gif" class="gif"></img><br><br>
-
-                even <button>buttons!</button>
-            </p>
-        `,
-    },
-};
-
 // Function to get a hash of the current date
 function getTodayHash() {
     const today = new Date();
     return today.toDateString(); // Returns the date string, i.e., "Thu Mar 14 2025"
-}
-
-function viewPost(postId) {
-    const post = posts[postId];
-    const postContent = `
-        <h1>${post.title}</h1>
-        <div class="post-content">${post.content}</div>
-        <button onclick="loadPage('blog')">back to blog</button>
-    `;
-    document.querySelector(".container").innerHTML = higher + postContent + lower;
-
-    displayQuote()
 }
 
 function getQuoteIndexForToday() {
@@ -223,37 +179,8 @@ function getQuoteOfTheDay() {
     return quotesTable[index];
 }
 
-function displayBlogPosts() {
-    const blogContainer = document.querySelector(".blog-posts");
-    blogContainer.innerHTML = ''; // Clear the container before adding buttons
-
-    // Loop through each post in the posts object
-    Object.keys(posts).forEach(postId => {
-        const post = posts[postId];
-        const postButton = document.createElement('button');
-        postButton.textContent = post.title;
-        postButton.onclick = function() {
-            viewPost(postId); // View post when clicked
-        };
-
-        blogContainer.appendChild(postButton); // Append the button to the container
-    });
-}
-
 function loadPage(page) {
-    document.querySelector(".container").innerHTML = higher + PAGES[page] + lower;
-
-    // Check if the page is 'blog', and wait for the container to exist
-    if (page === 'blog') {
-        const interval = setInterval(() => {
-            const blogContainer = document.querySelector(".blog-posts");
-            if (blogContainer) {
-                displayBlogPosts(); // Display the posts
-                clearInterval(interval); // Stop checking once the container is found
-            }
-        }, 100); // Check every 100ms until the container is available
-    }
-
+    document.querySelector(".container").innerHTML = higher + PAGES[page];
     displayQuote(); // Display the quote
 }
 
