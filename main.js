@@ -86,8 +86,10 @@ const PAGES = {
             steam: <a href="https://steamcommunity.com/id/ShibaTheDeveloper" target="_blank">ShibaTheDeveloper</a> <br>
         </p>
 
-        <h1>my most recent video</h1>
+        <h2>my most recent video</h2>
+        <div class="videoWrapper">
         <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUpeQpdGySva14lL8o-1Gr5Q"></iframe>
+        </div>
 
         <!--<img src="/Assets/doggo-on-da-swing.gif" class="gif"></img>-->
     `,
@@ -152,7 +154,6 @@ var higher = `
         <button onclick="loadPage('links')">links</button>
         <button onclick="loadPage('interests')">interests</button>
         <button onclick="loadPage('projects')">projects</button>
-        <button onclick="loadPage('blog')">blog</button>
     </div>
 `;
 
