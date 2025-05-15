@@ -161,10 +161,11 @@ a:hover {
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
 }
+
 .videoWrapper iframe {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 5%;
   width: 90%;
   height: 90%;
 }
