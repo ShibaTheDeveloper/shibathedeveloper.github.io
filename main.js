@@ -9,7 +9,6 @@ const quotesTable = [
     { text: "The most successful games are the ones that surprise you, make you laugh, or make you feel something.", author: "Kenji Inafune" },
     { text: "Games are meant to be shared. Not only with your friends but with the world.", author: "Jade Raymond" },
     { text: "A game is about making players feel good, feel that they’ve learned something, and have fun.", author: "Satoru Iwata" },
-    { text: "Peantis, haha!", author: "Me"}
 ];
 
 const PAGES = {
@@ -74,20 +73,23 @@ const PAGES = {
         <h1>links</h1>
 
         <p>
-            I'm pretty active on everything besides yt (i have nothing to upload) <br>
+            I'm pretty active on everything besides youtube. <br>
             please do not send me friend requests on roblox, and steam. <br>
             instead of friending me on discord just send me a message. <br>
         </p>
 
         <p>
-            discord: shibahh <br>
-            roblox: <a href="https://www.roblox.com/users/2456801075/profile" target="_blank">ssshibah</a><br>
-            yt: <a href="https://www.youtube.com/@shibahh" target="_blank">@shibahh</a> <br>
-            github: <a href="https://github.com/shibahhh" target="_blank">shibahh</a> <br>
-            steam: <a href="https://steamcommunity.com/id/shibahh" target="_blank">shibahh</a> <br>
+            discord: shibathedeveloper <br>
+            roblox: <a href="https://www.roblox.com/users/2456801075/profile" target="_blank">ShibaTheDeveloper</a><br>
+            yt: <a href="https://www.youtube.com/@ShibaTheDeveloper" target="_blank">@ShibaTheDeveloper</a> <br>
+            github: <a href="https://github.com/shibahh" target="_blank">shibahh</a> <br>
+            steam: <a href="https://steamcommunity.com/id/ShibaTheDeveloper" target="_blank">ShibaTheDeveloper</a> <br>
         </p>
 
-        <img src="/Assets/doggo-on-da-swing.gif" class="gif"></img>
+        <h1>my most recent video</h1>
+        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUpeQpdGySva14lL8o-1Gr5Q"></iframe>
+
+        <!--<img src="/Assets/doggo-on-da-swing.gif" class="gif"></img>-->
     `,
     interests: `
         <h1>interests</h1>
