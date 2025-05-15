@@ -105,7 +105,7 @@ const PAGES = {
             my taste in games is all over the place, and i haven't really figured out what game genres i like and which ones i don't like <br>
             (in no particular order)<br><br>
 
-            my favorite game as of 5/14/2025: Entry Point: Freelancer's Cut
+            my favorite game as of 5/14/2025: Entry Point: Freelancer's Cut<br><br>
 
             games i'm a fan of: <br>
             -RDR2 <br>
