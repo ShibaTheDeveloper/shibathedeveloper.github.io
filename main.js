@@ -80,6 +80,7 @@ const PAGES = {
 
         <p>
             discord: shibathedeveloper <br>
+            bsky: <a href="https://bsky.app/profile/shibadev.bsky.social" target="_blank">ShibaTheDeveloper</a><br>
             roblox: <a href="https://www.roblox.com/users/2456801075/profile" target="_blank">ShibaTheDeveloper</a><br>
             yt: <a href="https://www.youtube.com/@ShibaTheDeveloper" target="_blank">@ShibaTheDeveloper</a> <br>
             github: <a href="https://github.com/shibahh" target="_blank">shibahh</a> <br>
