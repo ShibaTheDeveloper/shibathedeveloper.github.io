@@ -39,6 +39,16 @@ const PAGES = {
         <small>projects are sorted from newest to oldest</small> <br>
 
         <div class="project-container">
+           <a href="https://www.roblox.com/games/81692255468425/Same-Day-Shipping">
+                <img src="/Assets/sds.webp" width = 150 height = 150>
+           </a></img> <br>
+
+            <p>
+                Same Day Shipping is a game where you deliver parcels on a deadly timer.
+            </p>
+        </div>
+
+        <div class="project-container">
            <a href="https://www.roblox.com/games/88623920231246/Teapot-Tumble">
                 <img src="/Assets/teapot-tumble.png" width = 150 height = 150>
            </a></img> <br> 
@@ -100,7 +110,7 @@ const PAGES = {
         <h2>hobbies:</h2>
         <p>
             one of my favorite hobbies is coding, which i have been doing since 2018! <br>
-            the languages i use are: lua, luau, and python (not that good at it) <br>
+            i code in luau a lot, but i've been making a switch to love2d and lua <br>
         </p>
 
         <h2>games:</h2>
@@ -125,7 +135,7 @@ const PAGES = {
             games i used to be a fan of: <br>
             -The Battle Bricks <br>
             -TDS <br>
-            -The Wild West (it's actually been growing on me recently cause of the v4 release) <br>
+            -The Wild West <br>
             -Clash Royale (p2w dogshit) <br>
         </p>
 
