@@ -95,6 +95,7 @@ const PAGES = {
             yt: <a href="https://www.youtube.com/@ShibaTheDeveloper" target="_blank">@ShibaTheDeveloper</a> <br>
             github: <a href="https://github.com/ShibaTheDeveloper" target="_blank">ShibaTheDeveloper</a> <br>
             steam: <a href="https://steamcommunity.com/id/ShibaTheDeveloper" target="_blank">ShibaTheDeveloper</a> <br>
+            itch.io: <a href="https://shibathedeveloper.itch.io/" target="_blank">ShibaTheDeveloper</a> <br>
         </p>
 
         <h2>my most recent video</h2>
