@@ -126,7 +126,7 @@ const PAGES = {
             -Ultrakill <br>
             -Spore <br>
             -Forsaken <br>
-            -Clash of Clans (i love coc)<br>
+            -Clash of Clans<br>
             -Entry Point (freelancer's cut and the og)<br>
             -Outer Wilds (i haven't even completed the game LOL)<br>
             -Valorant<br>
@@ -137,7 +137,7 @@ const PAGES = {
             -The Battle Bricks <br>
             -TDS <br>
             -The Wild West <br>
-            -Clash Royale (p2w dogshit) <br>
+            -Clash Royale (p2w) <br>
         </p>
 
         <h2>music:</h2>
@@ -147,7 +147,7 @@ const PAGES = {
 
             fav artists: <br>
             -kendrick lamar <br>
-            -kanye west (yes i know this man is psychotic, i just like graduation) <br>
+            -kanye west <br>
             -eminem <br>
             -micheal jackson <br><br>
             
