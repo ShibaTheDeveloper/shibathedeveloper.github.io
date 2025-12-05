@@ -13,6 +13,7 @@ const quotesTable = [
 
 const PAGES = {
     index: `
+        <h1>!! THIS WEBSITE IS FAR OVERDUE FOR A RE-CODE, WHICH WILL HAPPEN SOON !!</h1>
         <h1>welcome!</h1>
 
         <p>
