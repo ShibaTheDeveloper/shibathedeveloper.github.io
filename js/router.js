@@ -1,17 +1,8 @@
-async function loadPage(page) {
-  try {
-    const res = await fetch(`pages/${page}.html`);
-    const html = await res.text();
-    document.getElementById("app").innerHTML = html;
-  } catch (err) {
-    document.getElementById("app").innerHTML = "<p>Page not found.</p>";
-  }
+async function loadPage() {
+  const page = location.hash.slice(1) || 'home';
+  const html = await fetch(`pages/${page}.html`).then(r => r.text());
+  document.getElementById('app').innerHTML = html;
 }
 
-function router() {
-  const page = location.hash.replace("#", "") || "home";
-  loadPage(page);
-}
-
-window.addEventListener("hashchange", router);
-window.addEventListener("load", router);
+window.addEventListener('hashchange', loadPage);
+window.addEventListener('load', loadPage);
