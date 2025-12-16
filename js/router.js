@@ -1,5 +1,5 @@
 async function loadPage() {
-  const page = location.hash.slice(1) || 'resume';
+  const page = location.hash.slice(1) || 'home';
   const html = await fetch(`pages/${page}.html`).then(r => r.text());
   document.getElementById('app').innerHTML = html;
 }
