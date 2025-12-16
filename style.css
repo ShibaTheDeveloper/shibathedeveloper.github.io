@@ -121,7 +121,10 @@ p {
     width: calc(100% - 40px);
     margin: 10px auto;
     box-sizing: border-box;
-    font-size: 1rem
+    font-size: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 ul {
