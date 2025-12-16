@@ -105,10 +105,10 @@ h2 {
     border: none;
     padding: 10px 20px;
     font-family: 'Ubuntu', sans-serif;
-    display: inline-block;
-    margin: 5px;
-    font-size: 1rem;
+    display: block;
     width: calc(100% - 40px);
+    margin: 10px auto;
+    font-size: 1rem;
     box-sizing: border-box;
 }
 
