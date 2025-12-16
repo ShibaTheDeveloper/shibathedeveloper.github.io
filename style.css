@@ -19,7 +19,7 @@ body {
     justify-self: center;
     align-self: center;
     margin-top: 5vh;
-    height: auto; 
+    height: auto;
     width: auto;
     max-width: 100%;
     max-height: 80vh;
@@ -92,9 +92,11 @@ h1 {
     border: none;
     padding: 10px 20px;
     font-family: 'Ubuntu', sans-serif;
-    display: inline-block;
-    margin: 5px;
+    display: block;
+    width: calc(100% - 40px);
+    margin: 10px auto;
     font-size: 2rem;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -109,6 +111,17 @@ h2 {
 }
 
 p {
+    background-color: rgb(17, 17, 17);
+    color: rgb(232, 232, 232);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+ul {
     background-color: rgb(17, 17, 17);
     color: rgb(232, 232, 232);
     border: none;
