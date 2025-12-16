@@ -108,6 +108,8 @@ h2 {
     display: inline-block;
     margin: 5px;
     font-size: 1rem;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
 }
 
 p {
