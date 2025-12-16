@@ -3,7 +3,7 @@ async function loadPage() {
   const html = await fetch(`pages/${page}.html`).then(r => r.text());
   document.getElementById('app').innerHTML = html;
 
-  document.title = page.charAt(0).toUpperCase() + page.slice(1) + "Page";
+  document.title = page.charAt(0).toUpperCase() + page.slice(1) + " Page";
 }
 
 window.addEventListener('hashchange', loadPage);
