@@ -30,8 +30,6 @@ async function loadPage() {
 
   } catch (err) {
     console.error('Failed to load page:', err);
-    app.innerHTML = '<h1>Something went wrong.</h1>';
-    document.title = 'Error';
   }
 }
 
