@@ -59,9 +59,15 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: calc(100% - 40px);
     margin: 5px auto;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.button-container button {
+    margin: 5px;
+    max-width: 100%;
     box-sizing: border-box;
 }
 
@@ -171,8 +177,13 @@ button:active, a:active {
         padding: 8px 15px;
     }
 
-    button {
+    .button-container {
+        width: calc(100% - 40px);
+    }
+
+    .button-container button {
         width: 100%;
+        max-width: 100%;
     }
 }
 
