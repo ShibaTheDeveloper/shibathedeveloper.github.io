@@ -21,6 +21,8 @@ async function loadPage() {
   try {
     const response = await fetch(`pages/${page}.html`);
     const html = await response.text();
+
+    html += '<h2 id="last-updated">Last updated: ..I dunno</h2>';
     app.innerHTML = html;
 
     document.title = page.charAt(0).toUpperCase() + page.slice(1) + " Page";
