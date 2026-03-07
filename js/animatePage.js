@@ -1,6 +1,6 @@
 function animateAppContent() {
   const app = document.getElementById('app');
-  const appChildren = app.querySelectorAll('#app > *');
+  const appChildren = app.querySelectorAll('#app > :not(script)');
 
   appChildren.forEach((element, index) => {
     element.style.opacity = 0;
