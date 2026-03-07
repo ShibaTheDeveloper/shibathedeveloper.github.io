@@ -15,7 +15,7 @@ body {
     overflow: hidden;
 }
 
-img {
+body > img {
     justify-self: center;
     align-self: center;
     margin-top: 5vh;
