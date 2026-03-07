@@ -134,6 +134,14 @@ a:hover {
     cursor: crosshair;
 }
 
+a, button {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+a:hover, button:hover {
+    transform: scale(1.05);
+}
+
 @media screen and (max-width: 680px) {
     body {
         flex-direction: column;
