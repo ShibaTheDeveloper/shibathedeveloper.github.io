@@ -1,0 +1,20 @@
+async function loadPage() {
+  const page = location.hash.slice(1) || 'home';
+  const app = document.getElementById('app');
+
+  try {
+    const response = await fetch(`pages/${page}.html`);
+    const html = await response.text();
+    app.innerHTML = html;
+
+    document.title = page.charAt(0).toUpperCase() + page.slice(1) + " Page";
+
+  } catch (err) {
+    console.error('Failed to load page:', err);
+    app.innerHTML = '<h1>Something went wrong.</h1>';
+    document.title = 'Error';
+  }
+}
+
+window.addEventListener('hashchange', loadPage);
+window.addEventListener('load', loadPage);
