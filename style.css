@@ -54,6 +54,12 @@ html, body {
     overflow: auto;
 }
 
+.button-container button {
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
 .button-container {
     background-color: rgb(6, 6, 6);
     display: flex;
@@ -63,12 +69,6 @@ html, body {
     margin: 5px auto;
     box-sizing: border-box;
     flex-wrap: wrap;
-}
-
-.button-container button {
-    margin: 5px;
-    max-width: 100%;
-    box-sizing: border-box;
 }
 
 br {
@@ -175,15 +175,6 @@ button:active, a:active {
     h2, p, button {
         font-size: 0.8rem;
         padding: 8px 15px;
-    }
-
-    .button-container {
-        width: calc(100% - 40px);
-    }
-
-    .button-container button {
-        width: 100%;
-        max-width: 100%;
     }
 }
 
