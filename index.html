@@ -30,6 +30,17 @@
     </header>
 
     <div id="app"></div>
+
+    <script>
+      const appChildren = document.querySelectorAll('#app *');
+      appChildren.forEach((el, index) => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(20px)';
+        el.style.animation = `fadeSlideIn 0.5s ease-out forwards`;
+        el.style.animationDelay = `${index * 0.1}s`;
+      });
+    </script>
+
   </div>
 
   <script src="js/router.js"></script>
