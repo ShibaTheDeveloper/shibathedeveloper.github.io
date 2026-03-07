@@ -122,7 +122,6 @@ button {
     color: rgb(232, 232, 232);
     border: none;
     padding: 10px 20px;
-    cursor: crosshair;
     font-family: 'Ubuntu', sans-serif;
     display: inline-block;
     margin: 5px;
@@ -140,7 +139,6 @@ a {
 
 a:hover {
     color: rgb(0, 120, 218);
-    cursor: crosshair;
 }
 
 a, button {
@@ -187,4 +185,8 @@ button:active, a:active {
         transform: translateY(0px);
         opacity: 1;
     }
+}
+
+* {
+    cursor: crosshair;
 }
