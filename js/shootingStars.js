@@ -65,22 +65,30 @@ for (let i = 0; i < canvas.width * canvas.height / 6000; i++) {
 let lastTime = performance.now();
 
 function animate(now) {
-    const dt = (now - lastTime) / 1000;
+    let dt = (now - lastTime) / 1000;
     lastTime = now;
+
+    dt = Math.min(dt, 0.05);
 
     const scale = dt / TARGET_FRAME;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    stars.forEach((star) => {
+    for (const star of stars) {
         star.update(scale);
         star.draw();
-    });
+    }
 
     requestAnimationFrame(animate);
 }
 
 requestAnimationFrame(animate);
+
+document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) {
+        lastTime = performance.now();
+    }
+});
 
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
