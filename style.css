@@ -240,3 +240,8 @@ button:active, a:active {
     word-wrap: break-word;
     color: rgb(232, 232, 232);
 }
+
+.project-text a {
+    text-decoration: none;
+    color: inherit;
+}
