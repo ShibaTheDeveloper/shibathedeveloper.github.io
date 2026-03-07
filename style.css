@@ -248,3 +248,15 @@ button:active, a:active {
     text-decoration: none;
     color: inherit;
 }
+
+.easter-egg-hyperlink {
+    color: #7aa6c2;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.easter-egg-hyperlink:hover {
+    color: #92c0e0;
+    text-decoration: underline;
+    transform: scale(1.02);
+}
