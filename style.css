@@ -190,3 +190,7 @@ button:active, a:active {
 * {
     cursor: crosshair;
 }
+
+#last-updated {
+    margin-top: auto;
+}
