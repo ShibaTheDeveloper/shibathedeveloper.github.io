@@ -59,7 +59,10 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px;
+
+    width: calc(100% - 40px);
+    margin: 5px auto;
+    box-sizing: border-box;
 }
 
 br {
@@ -135,7 +138,7 @@ a:hover {
 }
 
 a, button {
-    transition: transform 0.1s ease, color 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 a:hover, button:hover {
