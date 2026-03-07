@@ -6,7 +6,7 @@ async function loadPage() {
 
   document.title = page.charAt(0).toUpperCase() + page.slice(1) + " Page";
 
-  const appChildren = app.querySelectorAll('*');
+  const appChildren = app.querySelectorAll('#app > *');
   appChildren.forEach((element, index) => {
     element.style.opacity = 0;
     element.style.transform = 'translateY(20px)';
