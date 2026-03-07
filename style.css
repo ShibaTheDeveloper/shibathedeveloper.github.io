@@ -250,13 +250,13 @@ button:active, a:active {
 }
 
 .easter-egg-hyperlink {
-    color: #7aa6c2;
+    color: rgb(232, 232, 232);
     text-decoration: none;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .easter-egg-hyperlink:hover {
-    color: #92c0e0;
+    color: rgb(232, 232, 232);
     text-decoration: underline;
     transform: scale(1.02);
 }
