@@ -8,6 +8,7 @@ async function loadPage() {
     app.innerHTML = html;
 
     document.title = page.charAt(0).toUpperCase() + page.slice(1) + " Page";
+    requestAnimationFrame(animateAppContent);
 
   } catch (err) {
     console.error('Failed to load page:', err);
