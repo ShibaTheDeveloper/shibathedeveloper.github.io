@@ -4,12 +4,15 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+const TARGET_FPS = 240;
+const TARGET_FRAME = 1 / TARGET_FPS;
+
 class ShootingStar {
     constructor() {
         this.reset();
 
         for (let i = 0; i < Math.random() * 100000; i++) {
-            this.update()
+            this.update(1);
         }
     }
 
@@ -22,10 +25,12 @@ class ShootingStar {
         this.opacity = Math.random() * 0.5 + 0.5;
     }
 
-    update() {
-        this.x += Math.cos((this.angle * Math.PI) / 180) * this.speed;
-        this.y += Math.sin((this.angle * Math.PI) / 180) * this.speed;
-        this.opacity -= 0.001; // Gradually fade
+    update(scale) {
+        const rad = (this.angle * Math.PI) / 180;
+
+        this.x += Math.cos(rad) * this.speed * scale;
+        this.y += Math.sin(rad) * this.speed * scale;
+        this.opacity -= 0.001 * scale;
 
         if (this.opacity <= 0) {
             this.reset();
@@ -33,40 +38,49 @@ class ShootingStar {
     }
 
     draw() {
-        ctx.strokeStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        const rad = (this.angle * Math.PI) / 180;
+
+        ctx.strokeStyle = `rgba(255,255,255,${this.opacity})`;
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(this.x, this.y);
         ctx.lineTo(
-            this.x - Math.cos((this.angle * Math.PI) / 180) * this.length,
-            this.y - Math.sin((this.angle * Math.PI) / 180) * this.length
+            this.x - Math.cos(rad) * this.length,
+            this.y - Math.sin(rad) * this.length
         );
         ctx.stroke();
     }
 }
 
 let stars = [];
-let starIndex = 0;
 
 function spawnStar() {
     stars.push(new ShootingStar());
 }
 
-for (let i = 0; i < (canvas.width * canvas.height / 6000); i++) {
-   spawnStar()
+for (let i = 0; i < canvas.width * canvas.height / 6000; i++) {
+    spawnStar();
 }
 
-function animate() {
+let lastTime = performance.now();
+
+function animate(now) {
+    const dt = (now - lastTime) / 1000;
+    lastTime = now;
+
+    const scale = dt / TARGET_FRAME;
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     stars.forEach((star) => {
-        star.update();
+        star.update(scale);
         star.draw();
     });
+
     requestAnimationFrame(animate);
 }
 
-animate();
+requestAnimationFrame(animate);
 
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
