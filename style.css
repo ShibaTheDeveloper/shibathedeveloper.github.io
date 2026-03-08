@@ -198,6 +198,37 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
     cursor: not-allowed;
 }
 
+/*-----------------------------
+   Easter Eggs
+---------------------------- */
+
+#java-easter-egg-notification {
+    position: fixed;
+    bottom: 20px;
+    right: -600px;
+    width: 450px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    transition: right 0.2s ease-out;
+    z-index: 999999999;
+    background: transparent;
+    overflow: hidden;
+}
+
+#java-easter-egg-notification img {
+    width: 100%;
+}
+
+#java-easter-egg-notification .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0;
+}
+
 /* ----------------------------
    Button Containers
 ---------------------------- */
@@ -295,7 +326,7 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
 }
 
 /* ----------------------------
-   Phone UI
+   Portrait Mode UI
 ---------------------------- */
 @media screen and (max-width: 680px) {
     body {
@@ -345,6 +376,21 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
 
     .project-description {
         font-size: 0.9rem;
+    }
+
+    #java-easter-egg-notification {
+        width: 90vw;
+        bottom: 30px;
+        right: -100vw;
+    }
+
+    #java-easter-egg-notification.show {
+        right: 5vw;
+    }
+
+    #java-easter-egg-notification img {
+        width: 100%;
+        height: auto;
     }
 }
 
