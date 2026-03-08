@@ -6,14 +6,14 @@ navButtons.forEach(button => {
 
     location.hash = `#${page}`;
 
-    navButtons.forEach(btn => btn.id = '');
+    navButtons.forEach(btn => btn.removeAttribute('id'));
     button.id = 'selected';
   });
 });
 
 function updateSelectedButtonFromHash() {
   const page = location.hash.slice(1) || 'home';
-  navButtons.forEach(btn => btn.id = '');
+  navButtons.forEach(btn => btn.removeAttribute('id'));
   const currentBtn = Array.from(navButtons).find(btn => btn.getAttribute('data-page') === page);
   if (currentBtn) currentBtn.id = 'selected';
 }
