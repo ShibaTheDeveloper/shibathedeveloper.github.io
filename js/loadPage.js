@@ -36,3 +36,10 @@ async function loadPage() {
 
 window.addEventListener('hashchange', loadPage);
 window.addEventListener('load', loadPage);
+
+
+document.addEventListener('dragstart', element => {
+  if (element.target.closest('a, button, .project-card')) {
+    element.preventDefault();
+  }
+});
