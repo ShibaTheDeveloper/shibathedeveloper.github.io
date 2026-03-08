@@ -4,11 +4,6 @@ navButtons.forEach(button => {
   button.addEventListener('click', () => {
     const page = button.getAttribute('data-page');
 
-    if (page === 'home') {
-      location.href = '/';
-      return;
-    }
-
     location.hash = `#${page}`;
 
     navButtons.forEach(btn => btn.removeAttribute('id'));
