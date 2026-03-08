@@ -2,7 +2,7 @@ async function loadProjects() {
     const response = await fetch('/json/projects.json');
     const projects = await response.json();
 
-    const projectsContainer = document.getElementById('projects-container');
+    const projectsContainer = document.querySelector('projects-container');
 
     for (const project of Object.values(projects)) {
         const projectCard = document.createElement("a");
