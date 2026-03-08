@@ -293,6 +293,33 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
         font-size: 0.8rem;
         padding: 8px 15px;
     }
+
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: calc(100% - 60px);
+        padding: 10px;
+    }
+
+    .project-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .project-text {
+        padding: 0;
+    }
+
+    .project-title {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+    }
 }
 
 /* ----------------------------
