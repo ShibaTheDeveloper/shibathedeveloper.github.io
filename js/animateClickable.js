@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const clickables = document.querySelectorAll("button, a, .project-card");
+    const clickables = document.querySelectorAll(
+        "button, a, .project-card, .easter-egg-hyperlink"
+    );
 
     clickables.forEach(element => {
-        element.style.transition = "transform 0.2s ease, box-shadow 0.2s ease";
-
-        element.addEventListener("mouseenter", () => {
-            element.style.transform = "scale(1.02)";
+        element.addEventListener("mouseover", () => {
+            element.style.transform = "scale(1.05)";
         });
 
-        element.addEventListener("mouseleave", () => {
+        element.addEventListener("mouseout", () => {
             element.style.transform = "";
             element.style.boxShadow = "";
         });

@@ -134,15 +134,14 @@ button:hover {
 a {
     display: inline-block;
     color: rgb(0, 140, 255);
-    transition: color 0.2s ease;
 }
 
 a:hover {
     color: rgb(0, 120, 218);
 }
 
-a, button {
-    transition: transform 0.2s ease, color 0.2s ease;
+button, a, .project-card, .easter-egg-hyperlink {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 @media screen and (max-width: 680px) {
@@ -237,5 +236,4 @@ a, button {
 .easter-egg-hyperlink {
     color: rgb(232, 232, 232);
     text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
 }
