@@ -36,16 +36,16 @@
 
         const closeBtn = document.createElement("div");
         closeBtn.style.position = "absolute";
-        closeBtn.style.top = "0";
-        closeBtn.style.right = "0";
-        closeBtn.style.width = "40px";
-        closeBtn.style.height = "40px";
+        closeBtn.style.top = "20px";
+        closeBtn.style.right = "20px";
+        closeBtn.style.width = "20px";
+        closeBtn.style.height = "20px";
         closeBtn.style.cursor = "pointer";
-        closeBtn.style.background = "transparent";
-        closeBtn.style.zIndex = 10;
+        closeBtn.style.opacity = 0
 
         closeBtn.addEventListener("click", () => {
             notification.remove();
+            closeBtn.remove();
         });
 
         notification.appendChild(closeBtn);
