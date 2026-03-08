@@ -171,6 +171,10 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
     cursor: pointer
 }
 
+#selected {
+    cursor: not-allowed;
+}
+
 /* ----------------------------
    Button Containers
 ---------------------------- */
