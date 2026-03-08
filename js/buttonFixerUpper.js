@@ -1,23 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     const buttonsAndLinks = document.querySelectorAll("button, a");
 
-    const resetStyles = (element) => {
-        element.style.transform = "";
-        element.style.boxShadow = "";
-    };
-
     buttonsAndLinks.forEach(element => {
-        element.addEventListener("mouseleave", () => resetStyles(element));
-        element.addEventListener("mouseup", () => resetStyles(element));
-    });
+        element.style.transition = "transform 0.2s ease, box-shadow 0.2s ease";
 
-    document.addEventListener("mouseup", () => {
-        buttonsAndLinks.forEach(resetStyles);
-    });
+        element.addEventListener("mousedown", () => {
+            element.style.transform = "scale(0.95)";
+            element.style.boxShadow = "0 0 5px rgba(0,0,0,0.2) inset";
+        });
 
-    document.addEventListener("visibilitychange", () => {
-        if (document.hidden) {
-            buttonsAndLinks.forEach(resetStyles);
-        }
+        document.addEventListener("mouseup", () => {
+            element.style.transform = "";
+            element.style.boxShadow = "";
+        });
+
+        element.addEventListener("mouseleave", () => {
+            element.style.transform = "";
+            element.style.boxShadow = "";
+        });
     });
 });
