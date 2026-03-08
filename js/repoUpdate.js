@@ -5,9 +5,7 @@ function getCookie(name) {
   return null;
 }
 
-function setCookie(name, value, days) {
-  const expires = new Date();
-  expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+function setCookie(name, value, expires) {
   document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
 }
 
@@ -34,15 +32,16 @@ async function loadRepoUpdate() {
   const repo = await res.json();
   const pushedDate = new Date(repo.pushed_at);
 
-  const formatted = pushedDate.toISOString();
   let diffDays = Math.floor((today - pushedDate) / (1000 * 60 * 60 * 24));
   const dayText = diffDays === 0 ? "Today" : `${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
 
   document.getElementById("last-updated").textContent =
     `Last updated: ${pushedDate.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })} (${dayText})`;
 
-  setCookie("repoLastUpdateDate", todayStr, 1);
-  setCookie("repoLastUpdateFormatted", formatted, 1);
+  const nextMidnight = new Date(today);
+  nextMidnight.setUTCHours(24, 0, 0, 0);
+  setCookie("repoLastUpdateDate", todayStr, nextMidnight);
+  setCookie("repoLastUpdateFormatted", pushedDate.toISOString(), nextMidnight);
 }
 
 loadRepoUpdate();
