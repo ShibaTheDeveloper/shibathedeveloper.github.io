@@ -14,30 +14,45 @@
     const scaleY = VIEW_HEIGHT / BASE_HEIGHT;
 
     function showNotification() {
-        if (document.getElementById("java-easter-egg-notification")) return;
+    if (document.getElementById("java-easter-egg-notification")) return;
 
-        const notificationImage = document.createElement("img");
-        notificationImage.id = "java-easter-egg-notification";
-        notificationImage.src = "/assets/easter-egg/javaupdate.webp";
-        notificationImage.style.position = "fixed";
+    const notification = document.createElement("div");
+        notification.id = "java-easter-egg-notification";
+        notification.style.position = "fixed";
+        notification.style.bottom = `${20 * scaleY}px`;
+        notification.style.right = `${-600 * scaleX}px`;
+        notification.style.width = `${450 * scaleX}px`;
+        notification.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
+        notification.style.borderRadius = "6px";
+        notification.style.transition = "right 0.2s ease-out";
+        notification.style.zIndex = 999999999999999;
+        notification.style.background = "#fff";
+        notification.style.overflow = "hidden";
 
-        const notifWidth = 450 * scaleX;
-        const notifBottom = 20 * scaleY;
-        const notifRightStart = -600 * scaleX;
-        const notifRightEnd = 20 * scaleX;
+        const img = document.createElement("img");
+        img.src = "/assets/easter-egg/javaupdate.webp";
+        img.style.width = "100%";
+        notification.appendChild(img);
 
-        notificationImage.style.width = `${notifWidth}px`;
-        notificationImage.style.bottom = `${notifBottom}px`;
-        notificationImage.style.right = `${notifRightStart}px`;
-        notificationImage.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
-        notificationImage.style.borderRadius = "6px";
-        notificationImage.style.transition = "right 0.2s ease-out";
-        notificationImage.style.zIndex = 999999999999999;
+        const closeBtn = document.createElement("div");
+        closeBtn.style.position = "absolute";
+        closeBtn.style.top = "0";
+        closeBtn.style.right = "0";
+        closeBtn.style.width = "40px";
+        closeBtn.style.height = "40px";
+        closeBtn.style.cursor = "pointer";
+        closeBtn.style.background = "transparent";
+        closeBtn.style.zIndex = 10;
 
-        document.body.appendChild(notificationImage);
+        closeBtn.addEventListener("click", () => {
+            notification.remove();
+        });
+
+        notification.appendChild(closeBtn);
+        document.body.appendChild(notification);
 
         setTimeout(() => {
-            notificationImage.style.right = `${notifRightEnd}px`;
+            notification.style.right = `${20 * scaleX}px`;
         }, 20);
     }
 
