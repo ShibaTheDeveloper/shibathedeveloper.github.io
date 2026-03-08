@@ -4,9 +4,9 @@ navButtons.forEach(button => {
   button.addEventListener('click', () => {
     const page = button.getAttribute('data-page');
 
-    if (location.hash.slice(1) !== page) {
-      location.hash = page === 'home' ? '' : `#${page}`;
-    }
+    if (!location.hash) {
+      if (page == "home") { return }
+    } else { location.hash = `#${page}`; }
 
     navButtons.forEach(btn => btn.removeAttribute('id'));
     button.id = 'selected';
