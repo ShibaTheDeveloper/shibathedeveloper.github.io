@@ -17,7 +17,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     position: relative;
     overflow: hidden;
 }
@@ -308,6 +307,8 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
     .container {
         width: 100%;
         padding: 10px;
+        border-radius: 0px;
+        height: 100%;
     }
 
     h1 {
