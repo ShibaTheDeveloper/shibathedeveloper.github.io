@@ -100,6 +100,26 @@ p {
 }
 
 /* ----------------------------
+   Lists
+---------------------------- */
+ul, ol {
+    background-color: rgb(17, 17, 17);
+    color: rgb(232, 232, 232);
+    padding: 10px 20px;
+    margin: 10px auto;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+
+    text-align: center;
+    list-style-position: inside;
+    font-size: 1rem;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* ----------------------------
    Buttons & Links
 ---------------------------- */
 button, a {
