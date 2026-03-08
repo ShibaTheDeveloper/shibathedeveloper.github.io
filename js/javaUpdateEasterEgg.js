@@ -41,7 +41,7 @@
 
         const closeBtn = document.createElement("div");
         closeBtn.style.position = "absolute";
-        closeBtn.style.top = `${20 * scaleY}px`;
+        closeBtn.style.top = `${5 * scaleY}px`;
         closeBtn.style.right = `${22 * scaleX}px`;
         closeBtn.style.width = `${20 * Math.min(scaleX, scaleY)}px`;
         closeBtn.style.height = `${20 * Math.min(scaleX, scaleY)}px`;
