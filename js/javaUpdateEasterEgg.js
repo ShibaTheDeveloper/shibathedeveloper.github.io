@@ -23,7 +23,7 @@
 
         const notifWidth = 450 * scaleX;
         const notifBottom = 20 * scaleY;
-        const notifRightStart = -400 * scaleX;
+        const notifRightStart = -600 * scaleX;
         const notifRightEnd = 20 * scaleX;
 
         notificationImage.style.width = `${notifWidth}px`;
