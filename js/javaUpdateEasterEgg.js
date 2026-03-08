@@ -28,6 +28,7 @@
         notification.style.zIndex = 99999999999999;
         notification.style.background = "#fff";
         notification.style.overflow = "hidden";
+        notification.style.opacity = 0
 
         const img = document.createElement("img");
         img.src = "/assets/easter-egg/javaupdate.webp";
