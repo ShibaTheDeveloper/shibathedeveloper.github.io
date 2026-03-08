@@ -26,9 +26,8 @@
         notification.style.borderRadius = "6px";
         notification.style.transition = "right 0.2s ease-out";
         notification.style.zIndex = 99999999999999;
-        notification.style.background = "#fff";
+        notification.style.background = "transparent";
         notification.style.overflow = "hidden";
-        notification.style.opacity = 0
 
         const img = document.createElement("img");
         img.src = "/assets/easter-egg/javaupdate.webp";
