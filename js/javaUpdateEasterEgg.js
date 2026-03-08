@@ -1,23 +1,44 @@
 const javaLink = document.getElementById("java-easter-egg");
+const checkNotification = document.getElementById("java-easter-egg-notification");
+
+if (checkNotification) return;
 
 if (javaLink) {
     const audio = new Audio("/assets/easter-egg/win10notif.ogg");
 
+    const BASE_WIDTH = 1658;
+    const BASE_HEIGHT = 548;
+
+    const VIEW_WIDTH = window.innerWidth;
+    const VIEW_HEIGHT = window.innerHeight;
+
+    const scaleX = VIEW_WIDTH / BASE_WIDTH;
+    const scaleY = VIEW_HEIGHT / BASE_HEIGHT;
+
     function showNotification() {
         const notificationImage = document.createElement("img");
+        notificationImage.id = "java-easter-egg-notification";
         notificationImage.src = "/assets/easter-egg/javaupdate.webp";
         notificationImage.style.position = "fixed";
-        notificationImage.style.bottom = "20px";
-        notificationImage.style.right = "-400px";
-        notificationImage.style.width = "300px"
+
+        const notifWidth = 400 * scaleX;
+        const notifBottom = 20 * scaleY;
+        const notifRightStart = -400 * scaleX;
+        const notifRightEnd = 20 * scaleX;
+
+        notificationImage.style.width = `${notifWidth}px`;
+        notificationImage.style.bottom = `${notifBottom}px`;
+        notificationImage.style.right = `${notifRightStart}px`;
         notificationImage.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
         notificationImage.style.borderRadius = "6px";
         notificationImage.style.transition = "right 0.2s ease-out";
 
+        notificationImage.style.zIndex = 999999999999999
+
         document.body.appendChild(notificationImage);
 
         setTimeout(() => {
-            notificationImage.style.right = "20px";
+            notificationImage.style.right = `${notifRightEnd}px`;
         }, 20);
     }
 
@@ -27,12 +48,9 @@ if (javaLink) {
     }
 
     function onClick() {
-        javaLink.classList.remove("easter-egg-hyperlink");
-        javaLink.removeAttribute("java-easter-egg");
-
         showNotification();
         playSound();
     }
 
-    javaLink.addEventListener("click", onClick, {once: true})
+    javaLink.addEventListener("click", onClick, { once: true });
 }
