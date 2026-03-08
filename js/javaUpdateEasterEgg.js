@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const javaLink = document.getElementById('java-link');
+    const javaLink = document.getElementById('java-easter-egg');
     if (!javaLink) return;
 
     let notificationExists = false;
