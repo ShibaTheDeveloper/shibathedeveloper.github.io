@@ -145,15 +145,6 @@ a, button {
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
-a:hover, button:hover {
-    transform: scale(1.05);
-}
-
-button:active, a:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
-}
-
 @media screen and (max-width: 680px) {
     body {
         flex-direction: column;
@@ -204,14 +195,8 @@ button:active, a:active {
     width: calc(100% - 40px);
     background-color: rgb(6, 6, 6);
     border-radius: 8px;
-    transition: transform 0.2s ease;
     text-decoration: none;
     color: inherit;
-}
-
-.project-card:hover {
-    transform: scale(1.02);
-    text-decoration: none;
 }
 
 .project-image {
@@ -253,10 +238,4 @@ button:active, a:active {
     color: rgb(232, 232, 232);
     text-decoration: none;
     transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.easter-egg-hyperlink:hover {
-    color: rgb(232, 232, 232);
-    text-decoration: underline;
-    transform: scale(1.02);
 }
