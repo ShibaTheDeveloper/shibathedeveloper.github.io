@@ -20,9 +20,11 @@ async function loadRepoUpdate() {
 
   if (cachedDate === todayStr && cachedFormatted) {
     const pushedDate = new Date(cachedFormatted);
-    const diffDays = Math.floor((today - pushedDate) / (1000 * 60 * 60 * 24));
+    let diffDays = Math.floor((today - pushedDate) / (1000 * 60 * 60 * 24));
+    const dayText = diffDays === 0 ? "Today" : `${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
+
     document.getElementById("last-updated").textContent =
-      `Last updated: ${pushedDate.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })} (${diffDays} day${diffDays !== 1 ? "s" : ""} ago)`;
+      `Last updated: ${pushedDate.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })} (${dayText})`;
     return;
   }
 
@@ -33,10 +35,11 @@ async function loadRepoUpdate() {
   const pushedDate = new Date(repo.pushed_at);
 
   const formatted = pushedDate.toISOString();
-  const diffDays = Math.floor((today - pushedDate) / (1000 * 60 * 60 * 24));
+  let diffDays = Math.floor((today - pushedDate) / (1000 * 60 * 60 * 24));
+  const dayText = diffDays === 0 ? "Today" : `${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
 
   document.getElementById("last-updated").textContent =
-    `Last updated: ${pushedDate.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })} (${diffDays} day${diffDays !== 1 ? "s" : ""} ago)`;
+    `Last updated: ${pushedDate.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })} (${dayText})`;
 
   setCookie("repoLastUpdateDate", todayStr, 1);
   setCookie("repoLastUpdateFormatted", formatted, 1);
