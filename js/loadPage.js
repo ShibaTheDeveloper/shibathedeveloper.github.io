@@ -24,10 +24,15 @@ async function loadPage() {
 
     app.innerHTML = html;
 
+    app.querySelectorAll('.project-card, .easter-egg-hyperlink').forEach(el => {
+      el.setAttribute('draggable', 'false');
+      el.addEventListener('dragstart', e => e.preventDefault());
+    });
+
     document.title = page.charAt(0).toUpperCase() + page.slice(1) + " Page";
 
     requestAnimationFrame(animateAppContent);
-    runScripts(app)
+    runScripts(app);
 
   } catch (err) {
     console.error('Failed to load page:', err);
