@@ -50,7 +50,7 @@ body > img {
 .container {
     width: 60%;
     max-width: 800px;
-    height: calc(100% - 40px);
+    height: calc(100% - 20px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
