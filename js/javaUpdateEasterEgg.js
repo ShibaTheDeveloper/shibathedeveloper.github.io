@@ -21,7 +21,7 @@ if (javaLink) {
         notificationImage.src = "/assets/easter-egg/javaupdate.webp";
         notificationImage.style.position = "fixed";
 
-        const notifWidth = 400 * scaleX;
+        const notifWidth = 600 * scaleX;
         const notifBottom = 20 * scaleY;
         const notifRightStart = -400 * scaleX;
         const notifRightEnd = 20 * scaleX;
