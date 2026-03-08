@@ -26,7 +26,11 @@ async function loadPage() {
 
     app.querySelectorAll('.project-card, .easter-egg-hyperlink').forEach(el => {
       el.setAttribute('draggable', 'false');
+
       el.addEventListener('dragstart', e => e.preventDefault());
+      el.addEventListener('drag', e => e.preventDefault());
+
+      el.addEventListener('mousedown', e => e.preventDefault());
     });
 
     document.title = page.charAt(0).toUpperCase() + page.slice(1) + " Page";

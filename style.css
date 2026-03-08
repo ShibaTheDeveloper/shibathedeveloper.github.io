@@ -276,6 +276,12 @@ a:active {
 /* ----------------------------
    Misc
 ---------------------------- */
+
+.project-card,
+.easter-egg-hyperlink {
+  user-select: none;
+}
+
 br {
     margin: 0.5vh;
 }
