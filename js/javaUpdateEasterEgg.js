@@ -17,19 +17,9 @@ if (javaLink) {
 
         document.body.appendChild(notificationImage);
 
-        requestAnimationFrame(() => {
-            notificationImage.getBoundingClientRect();
-            notificationImage.style.right = "20px";
-        });
-
         setTimeout(() => {
-            notificationImage.style.right = "-400px";
-            notificationImage.addEventListener(
-                "transitionend",
-                () => notificationImage.remove(),
-                { once: true }
-            );
-        }, 3000);
+            notificationImage.style.right = "20px";
+        }, 20);
     }
 
     function playSound() {
