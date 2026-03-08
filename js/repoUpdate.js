@@ -12,13 +12,17 @@ function setCookie(name, value, days) {
 }
 
 async function loadRepoUpdate() {
-  const today = new Date().toISOString().split("T")[0];
+  const today = new Date();
+  const todayStr = today.toISOString().split("T")[0];
+
   const cachedDate = getCookie("repoLastUpdateDate");
   const cachedFormatted = getCookie("repoLastUpdateFormatted");
 
-  if (cachedDate === today && cachedFormatted) {
+  if (cachedDate === todayStr && cachedFormatted) {
+    const pushedDate = new Date(cachedFormatted);
+    const diffDays = Math.floor((today - pushedDate) / (1000 * 60 * 60 * 24));
     document.getElementById("last-updated").textContent =
-      "Last updated: " + cachedFormatted;
+      `Last updated: ${pushedDate.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })} (${diffDays} day${diffDays !== 1 ? "s" : ""} ago)`;
     return;
   }
 
@@ -26,18 +30,15 @@ async function loadRepoUpdate() {
     "https://api.github.com/repos/ShibaTheDeveloper/shibathedeveloper.github.io"
   );
   const repo = await res.json();
-  const date = new Date(repo.pushed_at);
+  const pushedDate = new Date(repo.pushed_at);
 
-  const formatted = date.toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  });
+  const formatted = pushedDate.toISOString();
+  const diffDays = Math.floor((today - pushedDate) / (1000 * 60 * 60 * 24));
 
   document.getElementById("last-updated").textContent =
-    "Last updated: " + formatted;
+    `Last updated: ${pushedDate.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })} (${diffDays} day${diffDays !== 1 ? "s" : ""} ago)`;
 
-  setCookie("repoLastUpdateDate", today, 1);
+  setCookie("repoLastUpdateDate", todayStr, 1);
   setCookie("repoLastUpdateFormatted", formatted, 1);
 }
 
