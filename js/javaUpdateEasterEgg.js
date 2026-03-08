@@ -37,4 +37,4 @@
         showNotification();
         playSound();
     }, { once: true });
-})();
+})()
