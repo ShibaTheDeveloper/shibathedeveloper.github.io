@@ -25,7 +25,7 @@
         notification.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
         notification.style.borderRadius = "6px";
         notification.style.transition = "right 0.2s ease-out";
-        notification.style.zIndex = 999999999999999;
+        notification.style.zIndex = 99999999999999;
         notification.style.background = "#fff";
         notification.style.overflow = "hidden";
 
