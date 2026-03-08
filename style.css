@@ -28,7 +28,7 @@ body > img {
     margin-top: 5vh;
     height: auto;
     width: auto;
-    max-width: 100%;
+    max-width: calc(100% - 40px);
     max-height: 80vh;
 }
 
