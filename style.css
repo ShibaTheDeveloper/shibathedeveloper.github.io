@@ -1,12 +1,19 @@
-body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* ----------------------------
+   Base Styles
+---------------------------- */
+html, body {
+    height: 100dvh;
+    margin: 0;
     font-family: 'Ubuntu', Arial, sans-serif;
     text-align: center;
     background-color: rgb(0, 0, 0);
     color: #ffffff;
-    margin: 0;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,10 +32,9 @@ body > img {
     max-height: 80vh;
 }
 
-html, body {
-    height: 100dvh;
-}
-
+/* ----------------------------
+   Canvas
+---------------------------- */
 .shootingStarsCanvas {
     position: absolute;
     top: 0;
@@ -39,6 +45,9 @@ html, body {
     z-index: -2;
 }
 
+/* ----------------------------
+   Container
+---------------------------- */
 .container {
     width: 60%;
     max-width: 800px;
@@ -54,12 +63,99 @@ html, body {
     overflow: auto;
 }
 
-.button-container button {
-    max-width: 100%;
+/* ----------------------------
+   Typography
+---------------------------- */
+h1, h2, p {
+    border: none;
+    display: block;
+    width: calc(100% - 40px);
+    margin: 10px auto;
+    font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
-    word-break: break-word;
 }
 
+h1 {
+    background-color: rgb(6, 6, 6);
+    color: rgb(232, 232, 232);
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+
+h2 {
+    background-color: rgb(6, 6, 6);
+    color: rgb(232, 232, 232);
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+p {
+    background-color: rgb(17, 17, 17);
+    color: rgb(232, 232, 232);
+    padding: 10px 20px;
+    font-size: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* ----------------------------
+   Buttons & Links
+---------------------------- */
+button, a {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+button {
+    background-color: rgb(6, 6, 6);
+    color: rgb(232, 232, 232);
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 5px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+button:hover {
+    background-color: rgb(40, 40, 40);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
+}
+
+a {
+    display: inline-block;
+    color: rgb(0, 140, 255);
+}
+
+a:hover {
+    color: rgb(0, 120, 218);
+    transform: scale(1.05);
+}
+
+a:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
+}
+
+.easter-egg-hyperlink {
+    color: rgb(232, 232, 232);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.easter-egg-hyperlink:hover {
+    color: rgb(232, 232, 232);
+    text-decoration: underline;
+    transform: scale(1.02);
+}
+
+/* ----------------------------
+   Button Containers
+---------------------------- */
 .button-container {
     background-color: rgb(6, 6, 6);
     display: flex;
@@ -71,117 +167,15 @@ html, body {
     flex-wrap: wrap;
 }
 
-br {
-    margin: 0.5vh;
-}
-
-h1 {
-    background-color: rgb(6, 6, 6);
-    color: rgb(232, 232, 232);
-    border: none;
-    padding: 10px 20px;
-    font-family: 'Ubuntu', sans-serif;
-    display: block;
-    width: calc(100% - 40px);
-    margin: 10px auto;
-    font-size: 2rem;
+.button-container button {
+    max-width: 100%;
     box-sizing: border-box;
+    word-break: break-word;
 }
 
-h2 {
-    background-color: rgb(6, 6, 6);
-    color: rgb(232, 232, 232);
-    border: none;
-    padding: 10px 20px;
-    font-family: 'Ubuntu', sans-serif;
-    display: block;
-    width: calc(100% - 40px);
-    margin: 10px auto;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-p {
-    background-color: rgb(17, 17, 17);
-    color: rgb(232, 232, 232);
-    border: none;
-    padding: 10px 20px;
-    font-family: 'Ubuntu', sans-serif;
-    display: block;
-    width: calc(100% - 40px);
-    margin: 10px auto;
-    box-sizing: border-box;
-    font-size: 1rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
-
-button {
-    background-color: rgb(6, 6, 6);
-    color: rgb(232, 232, 232);
-    border: none;
-    padding: 10px 20px;
-    font-family: 'Ubuntu', sans-serif;
-    display: inline-block;
-    margin: 5px;
-}
-
-button:hover {
-    background-color: rgb(40, 40, 40);
-}
-
-a {
-    display: inline-block;
-    color: rgb(0, 140, 255);
-}
-
-a:hover {
-    color: rgb(0, 120, 218);
-}
-
-button, a, .project-card, .easter-egg-hyperlink, .project-card a {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    pointer-events: auto;
-}
-
-@media screen and (max-width: 680px) {
-    body {
-        flex-direction: column;
-        align-items: stretch;
-        overflow-y: auto;
-    }
-
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.3rem;
-    }
-
-    h2, p, button {
-        font-size: 0.8rem;
-        padding: 8px 15px;
-    }
-}
-
-@keyframes fadeSlideIn {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-* {
-    cursor: crosshair;
-}
-
+/* ----------------------------
+   Projects Section
+---------------------------- */
 .projects-container {
     display: flex;
     flex-direction: column;
@@ -195,8 +189,14 @@ button, a, .project-card, .easter-egg-hyperlink, .project-card a {
     width: calc(100% - 40px);
     background-color: rgb(6, 6, 6);
     border-radius: 8px;
+    transition: transform 0.2s ease;
     text-decoration: none;
     color: inherit;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    text-decoration: none;
 }
 
 .project-image {
@@ -234,7 +234,52 @@ button, a, .project-card, .easter-egg-hyperlink, .project-card a {
     color: inherit;
 }
 
-.easter-egg-hyperlink {
-    color: rgb(232, 232, 232);
-    text-decoration: none;
+/* ----------------------------
+   Animations
+---------------------------- */
+@keyframes fadeSlideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* ----------------------------
+   Phone UI
+---------------------------- */
+@media screen and (max-width: 680px) {
+    body {
+        flex-direction: column;
+        align-items: stretch;
+        overflow-y: auto;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2, p, button {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
+
+/* ----------------------------
+   Misc
+---------------------------- */
+br {
+    margin: 0.5vh;
+}
+
+* {
+    cursor: crosshair;
 }
