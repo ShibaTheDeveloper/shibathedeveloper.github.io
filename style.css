@@ -167,8 +167,8 @@ strong em {
     font-style: italic;
 }
 
-button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover {
-    cursor: "pointer"
+button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-container button:hover {
+    cursor: pointer
 }
 
 /* ----------------------------

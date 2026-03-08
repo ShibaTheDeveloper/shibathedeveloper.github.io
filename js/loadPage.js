@@ -15,7 +15,7 @@ function runScripts(container) {
 }
 
 async function loadPage() {
-  const page = location.hash.slice(1);
+  var page = location.hash.slice(1);
   const app = document.getElementById('app');
 
   if (!page) {
