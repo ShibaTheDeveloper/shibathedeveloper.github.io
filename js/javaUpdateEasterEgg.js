@@ -1,11 +1,13 @@
 const javaLink = document.getElementById("java-easter-egg");
+
+var notificationImage = null;
 let clickable = true;
 
 if (javaLink) {
     const audio = new Audio("/assets/easter-egg/win10notif.ogg");
 
     function showNotification() {
-        const notificationImage = document.createElement("img");
+        notificationImage = document.createElement("img");
         notificationImage.src = "/assets/easter-egg/javaupdate.webp";
         notificationImage.style.position = "fixed";
         notificationImage.style.bottom = "-100px";
@@ -21,7 +23,7 @@ if (javaLink) {
         requestAnimationFrame(() => {
             notificationImage.style.bottom = "20px";
             notificationImage.style.opacity = "1";
-        });
+        }, 10);
     }
 
     function playSound() {
