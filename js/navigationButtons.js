@@ -5,7 +5,7 @@ navButtons.forEach(button => {
     const page = button.getAttribute('data-page');
 
     if (!location.hash) {
-      if (page == "home") { return }
+      if (page == "home") { return } else { location.hash = `#${page}`; }
     } else { location.hash = `#${page}`; }
 
     navButtons.forEach(btn => btn.removeAttribute('id'));
