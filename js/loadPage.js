@@ -15,8 +15,13 @@ function runScripts(container) {
 }
 
 async function loadPage() {
-  const page = location.hash.slice(1) || 'home';
+  const page = location.hash.slice(1);
   const app = document.getElementById('app');
+
+  if (!page) {
+    location.hash = 'home'
+    page = 'home'
+  }
 
   try {
     const response = await fetch(`pages/${page}.html`);
