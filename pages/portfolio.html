@@ -24,5 +24,19 @@
 
 <div class="projects-container"></div>
 
-<script src="/js/javaUpdateEasterEgg.js"></script>
 <script src="/js/loadProjects.js"></script>
+
+<script>
+
+const javaLink = document.getElementById("java-easter-egg");
+
+if (javaLink) {
+  const audio = new Audio("/assets/easter-egg/win10notif.ogg");
+  javaLink.addEventListener("click", e => {
+    e.preventDefault();
+    audio.currentTime = 0;
+    audio.play().catch(err => console.warn(err));
+  });
+}
+
+</script>
