@@ -34,5 +34,5 @@ if (javaLink) {
         playSound();
     }
 
-    javaLink.addEventListener("click", onClick, {once: true});
+    javaLink.addEventListener("click", onClick, {once: true})
 }
