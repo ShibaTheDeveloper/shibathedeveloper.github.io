@@ -1,9 +1,7 @@
 const javaLink = document.getElementById("java-easter-egg");
 const checkNotification = document.getElementById("java-easter-egg-notification");
 
-if (checkNotification) return;
-
-if (javaLink) {
+if (!checkNotification && javaLink) {
     const audio = new Audio("/assets/easter-egg/win10notif.ogg");
 
     const BASE_WIDTH = 1658;
