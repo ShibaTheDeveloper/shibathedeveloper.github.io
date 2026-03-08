@@ -167,6 +167,10 @@ strong em {
     font-style: italic;
 }
 
+button:hover, a:hover, .easter-egg-hyperlink:hover, .project-card:hover {
+    cursor: "pointer"
+}
+
 /* ----------------------------
    Button Containers
 ---------------------------- */
@@ -325,8 +329,4 @@ strong em {
 
 br {
     margin: 0.5vh;
-}
-
-* {
-    cursor: crosshair;
 }
