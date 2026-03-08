@@ -150,7 +150,7 @@ a:active {
 
 .easter-egg-hyperlink:hover {
     color: rgb(232, 232, 232);
-    text-decoration: underline;
+    text-decoration: none;
     transform: scale(1.02);
 }
 
@@ -167,8 +167,12 @@ strong em {
     font-style: italic;
 }
 
-button:hover, a:hover, .easter-egg-hyperlink:hover, .project-card:hover {
+button:hover, a:hover, .easter-egg-hyperlink:hover {
     cursor: "pointer"
+}
+
+.project-card:hover {
+    cursor: "help"
 }
 
 /* ----------------------------
