@@ -1,14 +1,7 @@
 const javaLink = document.getElementById("java-easter-egg");
 
-let clickable = true;
-
 if (javaLink) {
     const audio = new Audio("/assets/easter-egg/win10notif.ogg");
-
-    function cleanUpNotification() {
-        notificationImage.remove();
-        clickable = true
-    }
 
     function showNotification() {
         const notificationImage = document.createElement("img");
@@ -25,13 +18,6 @@ if (javaLink) {
         setTimeout(() => {
             notificationImage.style.right = "20px";
         }, 20);
-
-        setTimeout(() => {
-            notificationImage.style.right = "-400px";
-            notificationImage.addEventListener(
-                "transitionend", cleanUpNotification, {once: true}
-            )
-        }, 3000);
     }
 
     function playSound() {
@@ -40,12 +26,12 @@ if (javaLink) {
     }
 
     function onClick() {
-        if (!clickable) return;
-        clickable = false;
+        javaLink.classList.remove("easter-egg-hyperlink");
+        javaLink.removeAttribute("java-easter-egg");
 
         showNotification();
         playSound();
     }
 
-    javaLink.addEventListener("click", onClick);
+    javaLink.addEventListener("click", onClick, {once: true});
 }
