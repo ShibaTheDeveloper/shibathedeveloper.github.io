@@ -140,8 +140,9 @@ a:hover {
     color: rgb(0, 120, 218);
 }
 
-button, a, .project-card, .easter-egg-hyperlink {
+button, a, .project-card, .easter-egg-hyperlink, .project-card a {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    pointer-events: auto;
 }
 
 @media screen and (max-width: 680px) {
