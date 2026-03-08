@@ -1,8 +1,8 @@
-const javaLink = document.getElementById("java-easter-egg");
-const checkNotification = document.getElementById("java-easter-egg-notification");
+(() => {
+    let javaLink = document.getElementById("java-easter-egg");
+    if (!javaLink || document.getElementById("java-easter-egg-notification")) return;
 
-if (!checkNotification && javaLink) {
-    const audio = new Audio("/assets/easter-egg/win10notif.ogg");
+    let audio = new Audio("/assets/easter-egg/win10notif.ogg");
 
     const BASE_WIDTH = 1658;
     const BASE_HEIGHT = 548;
@@ -14,6 +14,8 @@ if (!checkNotification && javaLink) {
     const scaleY = VIEW_HEIGHT / BASE_HEIGHT;
 
     function showNotification() {
+        if (document.getElementById("java-easter-egg-notification")) return;
+
         const notificationImage = document.createElement("img");
         notificationImage.id = "java-easter-egg-notification";
         notificationImage.src = "/assets/easter-egg/javaupdate.webp";
@@ -30,8 +32,7 @@ if (!checkNotification && javaLink) {
         notificationImage.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
         notificationImage.style.borderRadius = "6px";
         notificationImage.style.transition = "right 0.2s ease-out";
-
-        notificationImage.style.zIndex = 999999999999999
+        notificationImage.style.zIndex = 999999999999999;
 
         document.body.appendChild(notificationImage);
 
@@ -45,10 +46,8 @@ if (!checkNotification && javaLink) {
         audio.play().catch(err => console.warn(err));
     }
 
-    function onClick() {
+    javaLink.addEventListener("click", () => {
         showNotification();
         playSound();
-    }
-
-    javaLink.addEventListener("click", onClick, { once: true });
-}
+    }, { once: true });
+})();
