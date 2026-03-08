@@ -4,7 +4,7 @@
 html, body {
     height: 100dvh;
     margin: 0;
-    font-family: 'Ubuntu', Arial, sans-serif;
+    font-family: 'Lato', Arial, sans-serif;
     text-align: center;
     background-color: rgb(0, 0, 0);
     color: #ffffff;
@@ -71,7 +71,7 @@ h1, h2, p {
     display: block;
     width: calc(100% - 40px);
     margin: 10px auto;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
 
@@ -104,6 +104,7 @@ p {
 ---------------------------- */
 button, a {
     transition: transform 0.2s ease, color 0.2s ease;
+    font-family: 'Lato', sans-serif;
 }
 
 button {
@@ -113,7 +114,6 @@ button {
     padding: 10px 20px;
     display: inline-block;
     margin: 5px;
-    font-family: 'Ubuntu', sans-serif;
 }
 
 button:hover {
@@ -145,12 +145,26 @@ a:active {
     color: rgb(232, 232, 232);
     text-decoration: none;
     transition: color 0.2s ease, transform 0.2s ease;
+    font-family: 'Lato', sans-serif;
 }
 
 .easter-egg-hyperlink:hover {
     color: rgb(232, 232, 232);
     text-decoration: underline;
     transform: scale(1.02);
+}
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+strong em {
+    font-weight: 700;
+    font-style: italic;
 }
 
 /* ----------------------------
@@ -271,6 +285,38 @@ a:active {
         font-size: 0.8rem;
         padding: 8px 15px;
     }
+}
+
+/* ----------------------------
+   Fonts
+---------------------------- */
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
 }
 
 /* ----------------------------
