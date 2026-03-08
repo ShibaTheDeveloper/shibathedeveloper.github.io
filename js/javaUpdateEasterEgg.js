@@ -9,6 +9,7 @@ if (javaLink) {
         notificationImage.style.position = "fixed";
         notificationImage.style.bottom = "20px";
         notificationImage.style.right = "-400px";
+        notificationImage.style.width = "300px"
         notificationImage.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
         notificationImage.style.borderRadius = "6px";
         notificationImage.style.transition = "right 0.2s ease-out";
