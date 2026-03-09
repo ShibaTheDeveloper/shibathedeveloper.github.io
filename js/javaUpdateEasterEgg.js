@@ -19,8 +19,8 @@
         closeBtn.addEventListener("click", () => {
             notification.remove();
         });
-        notification.appendChild(closeBtn);
 
+        notification.appendChild(closeBtn);
         document.body.appendChild(notification);
 
         setTimeout(() => {
@@ -34,7 +34,9 @@
     }
 
     javaLink.addEventListener("click", () => {
-        showNotification();
-        playSound();
-    }, { once: true });
-})()
+        if (!document.getElementById("java-easter-egg-notification")) {
+            showNotification();
+            playSound();
+        }
+    });
+})();

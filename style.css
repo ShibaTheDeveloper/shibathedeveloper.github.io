@@ -216,6 +216,10 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
     overflow: hidden;
 }
 
+#java-easter-egg-notification.show {
+    right: 20px;
+}
+
 #java-easter-egg-notification img {
     width: 100%;
 }
