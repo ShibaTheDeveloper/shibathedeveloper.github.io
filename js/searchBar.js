@@ -5,7 +5,11 @@ document.querySelectorAll('.searchInput').forEach(input => {
 
         items.forEach(item => {
             const text = item.textContent.toLowerCase();
-            item.style.display = text.includes(filter) ? "block" : "none";
+            if (text.includes(filter)) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
         });
     });
 });
