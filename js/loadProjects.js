@@ -7,7 +7,7 @@ async function loadProjects() {
     for (const project of Object.values(projects)) {
         const projectCard = document.createElement("a");
         projectCard.href = project["project-link"];
-        projectCard.className = "project-card";
+        projectCard.className = "project-card searchable";
 
         projectsContainer.appendChild(projectCard);
 
