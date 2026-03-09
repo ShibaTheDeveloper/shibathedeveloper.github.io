@@ -3,6 +3,7 @@
 ---------------------------- */
 html, body {
     height: 100dvh;
+    overflow: hidden;
     margin: 0;
     font-family: 'Lato', Arial, sans-serif;
     text-align: center;
