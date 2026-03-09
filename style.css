@@ -288,6 +288,11 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
     text-decoration: none;
 }
 
+.project-tag,
+.project-card:hover .project-tag {
+    color: rgb(232, 232, 232);
+}
+
 .project-image {
     width: 150px;
     height: 150px;
@@ -327,6 +332,7 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
     margin-top: 6px;
     display: flex;
     align-items: center;
+    margin-top: auto;
     gap: 10px;
     flex-wrap: wrap;
 }
