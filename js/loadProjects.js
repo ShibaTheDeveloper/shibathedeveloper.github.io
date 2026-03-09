@@ -7,7 +7,7 @@ async function loadProjects() {
     for (const project of Object.values(projects)) {
         const projectCard = document.createElement("a");
         projectCard.href = project["project-link"];
-        projectCard.className = "project-card searchable";
+        projectCard.className = "project-card";
 
         projectsContainer.appendChild(projectCard);
 
@@ -17,7 +17,7 @@ async function loadProjects() {
         projectCard.appendChild(projectImage);
 
         const projectText = document.createElement("div");
-        projectText.className = "project-text";
+        projectText.className = "project-text searchable";
         projectCard.appendChild(projectText);
 
         const projectTitle = document.createElement("div");
@@ -31,7 +31,7 @@ async function loadProjects() {
         projectText.appendChild(projectDescription);
 
         const projectMeta = document.createElement("div");
-        projectMeta.className = "project-meta";
+        projectMeta.className = "project-meta searchable";
         projectText.appendChild(projectMeta);
 
         const projectDate = document.createElement("div");
