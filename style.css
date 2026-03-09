@@ -67,7 +67,7 @@ body > img {
 /* ----------------------------
    Typography
 ---------------------------- */
-h1, h2, p {
+h1, h2, p, input {
     border: none;
     display: block;
     width: calc(100% - 40px);
@@ -99,6 +99,13 @@ p {
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+}
+
+input {
+     background-color: rgb(6, 6, 6);
+    color: rgb(232, 232, 232);
+    padding: 10px 20px;
+    font-size: 1rem;
 }
 
 /* ----------------------------
@@ -314,6 +321,34 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
 .project-text a {
     text-decoration: none;
     color: inherit;
+}
+
+.project-meta {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-date {
+    font-size: 0.75rem;
+    color: rgb(170,170,170);
+    white-space: nowrap;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.project-tag {
+    background-color: rgb(17,17,17);
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    line-height: 1.2;
 }
 
 /* ----------------------------

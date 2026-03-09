@@ -1,29 +1,58 @@
 {
     "1": {
         "project-title": "Merge Boxes! 2D",
-        "project-description": "A re-creation of my old roblox game \"Merge Boxes!\", this time made in Love2D! This project is still actively being worked on, and is unfinished. (First created December 13, 2025)",
+        "project-description": "A re-creation of my old roblox game \"Merge Boxes!\", this time made in Love2D! This project is still actively being worked on, and is unfinished.",
         "project-image": "/assets/project-icons/mb2d.webp",
-        "project-link": "https://github.com/ShibaTheDeveloper/Merge-Boxes-2D"
+        "project-link": "https://github.com/ShibaTheDeveloper/Merge-Boxes-2D",
+
+        "project-created": "December 13, 2025",
+
+        "project-tags": {
+            "1": "Love2D",
+            "2": "Lua"
+        }
     },
 
     "2": {
         "project-title": "TBB:TARPG",
-        "project-description": "One of my first popular roblox games, It got over a million visits across all of it's places while it was up. I have taken it down, since I no longer wish to associate with it. If you think I'm bluffing, you can DM/Email me for proof. Why exactly did I take it down? VERY long story, I don't mind explaining though, ask away! (First created June 18, 2023)",
+        "project-description": "One of my first popular roblox games, It got over a million visits across all of it's places while it was up. I have taken it down, since I no longer wish to associate with it. If you think I'm bluffing, you can DM/Email me for proof. Why exactly did I take it down? VERY long story, I don't mind explaining though, ask away!",
         "project-image": "/assets/project-icons/tarpg.webp",
-        "project-link": "https://www.roblox.com/games/15148994711/i-dont-wanna-be-affiliated-with-tumore-anymore"
+        "project-link": "https://www.roblox.com/games/15148994711/i-dont-wanna-be-affiliated-with-tumore-anymore",
+
+        "project-created": "June 18, 2023",
+
+        "project-tags": {
+            "1": "Roblox",
+            "2": "LuaU"
+        }
     },
 
     "3": {
         "project-title": "Merge Boxes!",
-        "project-description": "This game was kind of a flop, but I had a LOT of fun making it back then, which is why it is getting a remake! (First created December 29, 2023)",
+        "project-description": "This game was kind of a flop, but I had a LOT of fun making it back then, which is why it is getting a remake!",
         "project-image": "/assets/project-icons/mb.webp",
-        "project-link": "https://www.roblox.com/games/15795590655/Merge-Boxes"
+        "project-link": "https://www.roblox.com/games/15795590655/Merge-Boxes",
+
+        "project-created": "December 29, 2023",
+
+        "project-tags": {
+            "1": "Roblox",
+            "2": "LuaU"
+        }
     },
 
     "4": {
         "project-title": "My Website",
-        "project-description": "..it's my website. You don't need to read about this, you're here! (First created February 11, 2025)",
+        "project-description": "..it's my website. You don't need to read about this, you're here!",
         "project-image": "assets/web/embed.webp",
-        "project-link": "https://github.com/ShibaTheDeveloper/shibathedeveloper.github.io"
+        "project-link": "https://github.com/ShibaTheDeveloper/shibathedeveloper.github.io",
+
+        "project-created": "February 11, 2025",
+
+        "project-tags": {
+            "1": "HTML",
+            "2": "CSS",
+            "3": "JavaScript"
+        }
     }
 }
