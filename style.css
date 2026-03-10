@@ -279,6 +279,7 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
     background-color: rgb(6, 6, 6);
     border-radius: 8px;
     transition: transform 0.2s ease;
+    text-decoration: none;
     color: inherit;
 }
 
@@ -322,11 +323,6 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
     font-size: 1rem;
     word-wrap: break-word;
     color: rgb(232, 232, 232);
-}
-
-.project-text a {
-    text-decoration: none;
-    color: inherit;
 }
 
 .project-meta {
