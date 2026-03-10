@@ -279,7 +279,6 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
     background-color: rgb(6, 6, 6);
     border-radius: 8px;
     transition: transform 0.2s ease;
-    text-decoration: none;
     color: inherit;
 }
 
