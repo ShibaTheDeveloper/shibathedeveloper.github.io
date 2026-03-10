@@ -27,7 +27,7 @@ async function loadProjects() {
 
         const projectDescription = document.createElement("div");
         projectDescription.className = "project-description";
-        projectDescription.textContent = project["project-description"];
+        projectDescription.innerHTML = project["project-description"];
         projectText.appendChild(projectDescription);
 
         const projectMeta = document.createElement("div");
