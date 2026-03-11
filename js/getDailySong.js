@@ -40,9 +40,6 @@ async function loadDailySong() {
     const wrapper = document.createElement("div");
     wrapper.className = "daily-song";
 
-    const title = document.createElement("h2");
-    title.textContent = "Daily Song";
-
     const iframe = document.createElement("iframe");
     iframe.src = embedUrl;
     iframe.allowFullscreen = true;
