@@ -46,7 +46,6 @@ async function loadDailySong() {
     iframe.loading = "lazy";
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
 
-    wrapper.appendChild(title);
     wrapper.appendChild(iframe);
 
     const container = document.querySelector(".container");
