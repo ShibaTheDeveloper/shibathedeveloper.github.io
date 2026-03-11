@@ -37,8 +37,8 @@ async function loadDailySong() {
 
     const embedUrl = `https://www.youtube.com/embed/${videoId}`;
 
-    const wrapper = document.createElement("div");
-    wrapper.className = "daily-song";
+    const container = document.getElementById("daily-song");
+    container.innerHTML = "";
 
     const iframe = document.createElement("iframe");
     iframe.src = embedUrl;
@@ -46,10 +46,7 @@ async function loadDailySong() {
     iframe.loading = "lazy";
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
 
-    wrapper.appendChild(iframe);
-
-    const container = document.querySelector(".container");
-    container.appendChild(wrapper);
+    container.appendChild(iframe);
 }
 
 loadDailySong();
