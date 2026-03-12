@@ -1,4 +1,4 @@
-async function loadDailySong() {
+async function loadDailySong(forceNew = false) {
     const COOKIE_NAME = "daily_song";
     const DATE_COOKIE = "daily_song_date";
 
@@ -20,15 +20,16 @@ async function loadDailySong() {
     let savedSong = getCookie(COOKIE_NAME);
     let savedDate = getCookie(DATE_COOKIE);
 
-    if (!savedSong || savedDate !== today) {
+    if (forceNew || !savedSong || savedDate !== today) {
         const response = await fetch("/json/songs.json");
-        const data = await response.json();
+        const links = await response.json();
 
-        const links = data;
         savedSong = links[Math.floor(Math.random() * links.length)];
 
-        setCookie(COOKIE_NAME, savedSong, 1);
-        setCookie(DATE_COOKIE, today, 1);
+        if (!forceNew) {
+            setCookie(COOKIE_NAME, savedSong, 1);
+            setCookie(DATE_COOKIE, today, 1);
+        }
     }
 
     const url = new URL(savedSong);
@@ -46,7 +47,12 @@ async function loadDailySong() {
     iframe.loading = "lazy";
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
 
+    const button = document.createElement("button");
+    button.textContent = "Gimmie another!";
+    button.addEventListener("click", () => loadDailySong(true));
+
     container.appendChild(iframe);
+    container.appendChild(button);
 }
 
 loadDailySong();
