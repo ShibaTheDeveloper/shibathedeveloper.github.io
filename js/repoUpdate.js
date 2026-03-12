@@ -9,16 +9,22 @@ function setCookie(name, value, expires) {
   document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
 }
 
+function daysBetweenUTC(a, b) {
+  const utcA = Date.UTC(a.getUTCFullYear(), a.getUTCMonth(), a.getUTCDate());
+  const utcB = Date.UTC(b.getUTCFullYear(), b.getUTCMonth(), b.getUTCDate());
+  return Math.floor((utcA - utcB) / 86400000);
+}
+
 async function loadRepoUpdate() {
   const today = new Date();
-  const todayStr = today.toISOString().split("T")[0];
+  const todayStr = today.toLocaleDateString("en-CA");
 
   const cachedDate = getCookie("repoLastUpdateDate");
   const cachedFormatted = getCookie("repoLastUpdateFormatted");
 
   if (cachedDate === todayStr && cachedFormatted) {
     const pushedDate = new Date(cachedFormatted);
-    let diffDays = Math.floor((today - pushedDate) / (1000 * 60 * 60 * 24));
+    const diffDays = daysBetweenUTC(today, pushedDate);
     const dayText = diffDays === 0 ? "Today" : `${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
 
     document.getElementById("last-updated").textContent =
@@ -32,14 +38,15 @@ async function loadRepoUpdate() {
   const repo = await res.json();
   const pushedDate = new Date(repo.pushed_at);
 
-  let diffDays = Math.floor((today - pushedDate) / (1000 * 60 * 60 * 24));
+  const diffDays = daysBetweenUTC(today, pushedDate);
   const dayText = diffDays === 0 ? "Today" : `${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
 
   document.getElementById("last-updated").textContent =
     `Last updated: ${pushedDate.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })} (${dayText})`;
 
-  const nextMidnight = new Date(today);
-  nextMidnight.setUTCHours(24, 0, 0, 0);
+  const nextMidnight = new Date();
+  nextMidnight.setHours(24, 0, 0, 0);
+
   setCookie("repoLastUpdateDate", todayStr, nextMidnight);
   setCookie("repoLastUpdateFormatted", pushedDate.toISOString(), nextMidnight);
 }
