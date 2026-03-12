@@ -370,6 +370,8 @@ button:hover, a:hover, .project-card:hover .easter-egg-hyperlink:hover .button-c
     aspect-ratio: 16 / 9;
     border: none;
     border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 /* ----------------------------
