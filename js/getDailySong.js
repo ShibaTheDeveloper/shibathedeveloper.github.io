@@ -9,13 +9,11 @@ async function loadDailySong(forceNew = false) {
         return null;
     }
 
-    function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + days * 86400000);
-        document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+    function setCookie(name, value, expires) {
+        document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
     }
 
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toLocaleDateString("en-CA");
 
     let savedSong = getCookie(COOKIE_NAME);
     let savedDate = getCookie(DATE_COOKIE);
@@ -27,8 +25,11 @@ async function loadDailySong(forceNew = false) {
         savedSong = links[Math.floor(Math.random() * links.length)];
 
         if (!forceNew) {
-            setCookie(COOKIE_NAME, savedSong, 1);
-            setCookie(DATE_COOKIE, today, 1);
+            const nextMidnight = new Date();
+            nextMidnight.setHours(24, 0, 0, 0);
+
+            setCookie(COOKIE_NAME, savedSong, nextMidnight);
+            setCookie(DATE_COOKIE, today, nextMidnight);
         }
     }
 
