@@ -38,12 +38,16 @@ body {
 
 
 
-
 header {
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.logo {
+    width: clamp(120px, 30%, 220px);
+    height: auto;
 }
 
 #app {
@@ -57,7 +61,6 @@ header,
     border-radius: 8px;
     padding: 16px;
 }
-
 
 h1, h2, p, input {
     border: none;
@@ -128,9 +131,13 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover, button:disabled {
     background-color: rgb(40, 40, 40);
     transform: scale(1.05);
+}
+
+button:active:not(:disabled) {
+    transform: scale(0.95);
 }
 
 
@@ -141,8 +148,23 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: rgb(0, 120, 218);
+    transform: scale(1.05);
+}
+
+a:active {
+    transform: scale(0.95);
+}
 
 
 * {
+    transition: transform 300ms ease;
     box-sizing: border-box;
+}
+
+
+
+.wavy span {
+    display: inline-block;
 }
