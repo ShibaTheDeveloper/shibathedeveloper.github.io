@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://mellowestmel.com/</loc>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://mellowestmel.com/index.html</loc>
+    </url>
+
+    <url>
+        <loc>https://mellowestmel.com/index.html?page=home</loc>
+    </url>
+
+    <url>
+        <loc>https://mellowestmel.com/index.html?page=interests</loc>
+    </url>
+
+    <url>
+        <loc>https://mellowestmel.com/index.html?page=links</loc>
+    </url>
+
+    <url>
+        <loc>https://mellowestmel.com/index.html?page=projects</loc>
+    </url>
+
+</urlset>

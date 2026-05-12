@@ -1,5 +1,5 @@
 async function loadProjects() {
-    const response = await fetch('/json/projects.json');
+    const response = await fetch('/src/data/projects.json');
     const projects = await response.json();
 
     const projectsContainer = document.querySelector('.projects-container');

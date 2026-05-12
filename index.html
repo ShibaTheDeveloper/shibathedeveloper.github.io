@@ -1,47 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="en">
+  <head>
+    <title>mellowestmel.com</title>
 
-<head>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="/assets/web/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/src/img/web/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/src/stylesheet.css">
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-  <meta property="og:title" content="MellowestMel's website!">
-  <meta property="og:description" content="A place to check out my projects, socials, and whatever I'm working on.">
-  <meta property="og:image" content="/assets/web/embed.webp">
-  <meta property="og:image:width" content="100">
-  <meta property="og:image:height" content="100">
+    <meta property="og:title" content="mellowestmel.com">
+    <meta property="og:description" content="Melly's site for all sorts of purposes!">
+    <meta property="og:image" content="https://mellowestmel.com/src/img/web/embed.png">
+    <meta property="og:url" content="https://mellowestmel.com">
+    <meta property="og:type" content="website">
 
-  <meta name="theme-color" content="#E4E78C">
-</head>
+    <meta name="description" content="Melly's site for all sorts of purposes!">
+    <meta name="twitter:card" content="summary_large_image">
 
-<body>
-  <canvas id="shootingStarsCanvas"></canvas>
-  <script src="js/shootingStars.js"></script>
+    <meta name="theme-color" content="#FFFFFF">
+  </head>
 
-  <div class="container">
-    <header>
-      <h2 id="last-updated">Last updated: November 26, 2011</h2>
-      <h2>NOTE: WEBSITE IS DUE FOR A REWORK, ONE IS CURRENTLY IN PROGRESS.</h2>
+  <body>
+      <div class="main-card">
+        <header>
+          <img class="logo" src="/src/img/logo.webp">
 
-      <div class="button-container">
-        <button data-page="home">Home</button>
-        <button data-page="about">About</button>
-        <button data-page="socials">Socials</button>
-        <button data-page="blog">Blog</button>
-        <button data-page="portfolio">Portfolio</button>
+          <h2>Last modified: 5/12/2026</h2>
+
+          <nav class="navigation-buttons">
+            <button data-page="home">Home</button>
+            <button data-page="interests">Interests</button>
+            <button data-page="links">Links</button>
+            <button data-page="coding-experience">Coding Experience</button>
+          </nav>
+
+        </header>
+
+        <main id="app"></main>
       </div>
-    </header>
+  </body>
 
-    <div id="app"></div>
-  </div>
-
-  <script src="js/loadPage.js"></script>
-  <script src="js/animatePage.js"></script>
-  <script src="js/repoUpdate.js"></script>
-  <script src="js/navigationButtons.js"></script>
-</body>
-
+  <script src="/src/js/router.js"></script>
+  <script src="/src/js/buttons.js"></script>
 </html>

@@ -1,0 +1,320 @@
+html, body {
+    height: 100dvh;
+    overflow: hidden;
+    margin: 0;
+    font-family: 'Lato', Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
+.main-card {
+    width: 60%;
+    max-width: 800px;
+    height: calc(100% - 20px);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    background: transparent;
+    padding: 20px;
+
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    animation: pageIn 500ms ease-out;
+}
+
+
+
+header {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: calc(100% - 40px);
+}
+
+#app {
+    flex: 1;
+    overflow: auto;
+}
+
+header,
+#app {
+    background-color: rgb(24, 24, 24);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+h1, h2, p, input {
+    border: none;
+    display: block;
+    width: calc(100% - 40px);
+    margin: 10px auto;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+h1 {
+    background-color: rgb(6, 6, 6);
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+
+h2 {
+    background-color: rgb(6, 6, 6);
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+p {
+    background-color: rgb(17, 17, 17);
+    padding: 10px 20px;
+}
+
+input {
+    background-color: rgb(6, 6, 6);
+    color: rgb(232, 232, 232);
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+
+
+ul, ol {
+    background-color: rgb(17, 17, 17);
+    padding: 10px 20px;
+    margin: 10px auto;
+    width: calc(100% - 40px);
+
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    list-style-position: inside;
+}
+
+
+
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+
+.navigation-buttons {
+    background-color: rgb(6, 6, 6);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+
+    width: calc(100% - 40px);
+    margin: 5px auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    padding: 10px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+
+button {
+    width: 100%;
+    background-color: rgb(6, 6, 6);
+    color: rgb(232, 232, 232);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover, button:disabled {
+    background-color: rgb(40, 40, 40);
+    transform: scale(1.05);
+}
+
+button:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+
+
+a {
+    display: inline-block;
+    color: rgb(0, 140, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(0, 120, 218);
+    transform: scale(1.05);
+}
+
+a:active {
+    transform: scale(0.95);
+}
+
+
+
+* {
+    transition: transform 300ms ease;
+    box-sizing: border-box;
+}
+
+br {
+    margin: 0.5vh;
+}
+
+
+
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.project-card {
+    display: flex;
+    width: calc(100% - 40px);
+    background-color: rgb(6, 6, 6);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    text-decoration: none;
+}
+
+.project-tag,
+.project-card:hover .project-tag {
+    color: rgb(232, 232, 232);
+}
+
+.project-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: auto;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+.project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.project-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: rgb(232, 232, 232);
+}
+
+.project-description {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    word-wrap: break-word;
+    color: rgb(232, 232, 232);
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-date {
+    font-size: 0.75rem;
+    color: rgb(170,170,170);
+    white-space: nowrap;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.project-tag {
+    background-color: rgb(17,17,17);
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    line-height: 1.2;
+}
