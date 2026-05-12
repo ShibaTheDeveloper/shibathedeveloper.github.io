@@ -34,8 +34,9 @@ body {
     border-radius: 8px;
 
     overflow: hidden;
-}
 
+    animation: pageIn 500ms ease-out;
+}
 
 
 header {
@@ -46,8 +47,7 @@ header {
 }
 
 .logo {
-    width: clamp(120px, 30%, 220px);
-    height: auto;
+    width: calc(100% - 40px);
 }
 
 #app {
@@ -105,10 +105,18 @@ ul, ol {
 
 
 
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+
 .navigation-buttons {
     background-color: rgb(6, 6, 6);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    display: flex;
+    flex-wrap: nowrap;
     gap: 10px;
 
     width: calc(100% - 40px);
@@ -117,6 +125,9 @@ ul, ol {
     border-radius: 8px;
 
     padding: 10px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 
@@ -158,6 +169,7 @@ a:active {
 }
 
 
+
 * {
     transition: transform 300ms ease;
     box-sizing: border-box;
@@ -167,4 +179,17 @@ a:active {
 
 .wavy span {
     display: inline-block;
+}
+
+
+
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

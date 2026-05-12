@@ -26,7 +26,6 @@ const Router = (() => {
     }
 
     currentPage = page;
-
     history.replaceState({}, "", `?page=${page}`);
 
     updateButtons();
