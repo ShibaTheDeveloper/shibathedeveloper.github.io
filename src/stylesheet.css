@@ -1,34 +1,109 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
     margin: 0;
+    font-family: 'Lato', Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
 }
 
 body {
-    flex-direction: column;
     display: flex;
-
-    height: 100vh;
-
-    font-family: sans-serif;
-}
-
-
-header {
     justify-content: center;
     align-items: center;
-    display: flex;
-
-    position: relative;
-
-    height: 60px;
-
-    padding: 0 16px;
 }
 
-header .logo {
-    position: absolute;
-    left: 50%;
 
-    transform: translateX(-50%);
+
+.main-card {
+    width: 60%;
+    max-width: 900px;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+header,
+#app {
+    background-color: rgb(24, 24, 24);
+    border-radius: 8px;
+
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    flex: 0 0 auto;
+}
+
+#app {
+    flex: 1;
+    overflow: auto;
+}
+
+
+
+h1, h2, p {
+    width: calc(100% - 40px);
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+h1 {
+    background-color: rgb(6, 6, 6);
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+
+h2 {
+    background-color: rgb(6, 6, 6);
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+p {
+    background-color: rgb(17, 17, 17);
+    padding: 10px 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+
+button {
+    background-color: rgb(6, 6, 6);
+    color: rgb(232, 232, 232);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+ul, ol {
+    width: calc(100% - 40px);
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: rgb(17, 17, 17);
+    border-radius: 8px;
+    list-style-position: inside;
+}
+
+
+
+a {
+    color: rgb(0, 140, 255);
+    text-decoration: none;
 }
