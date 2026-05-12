@@ -14,6 +14,11 @@ body {
     overflow: hidden;
 }
 
+body > *:not(#shootingStarsCanvas) {
+    position: relative;
+    z-index: 1;
+}
+
 
 
 .main-card {
@@ -35,9 +40,10 @@ body {
     overflow: hidden;
 
     animation: pageIn 500ms ease-out;
+
+    position: relative;
+    z-index: 1;
 }
-
-
 
 header {
     flex: 0 0 auto;
@@ -319,14 +325,19 @@ br {
     line-height: 1.2;
 }
 
+#shootingStarsCanvas {
+    position: fixed;
 
-
-.shootingStarsCanvas {
-    position: absolute;
     top: 0;
     left: 0;
+
     width: 100vw;
     height: 100vh;
-    color: rgba(255, 255, 255, 1);
-    z-index: -2;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    display: block;
+    flex: none;
 }
