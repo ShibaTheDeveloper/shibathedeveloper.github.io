@@ -16,7 +16,6 @@ body {
 
 
 
-
 .main-card {
     width: 60%;
     max-width: 800px;
@@ -37,6 +36,7 @@ body {
 
     animation: pageIn 500ms ease-out;
 }
+
 
 
 header {
@@ -87,6 +87,13 @@ h2 {
 p {
     background-color: rgb(17, 17, 17);
     padding: 10px 20px;
+}
+
+input {
+    background-color: rgb(6, 6, 6);
+    color: rgb(232, 232, 232);
+    padding: 10px 20px;
+    font-size: 1rem;
 }
 
 
@@ -175,10 +182,8 @@ a:active {
     box-sizing: border-box;
 }
 
-
-
-.wavy span {
-    display: inline-block;
+br {
+    margin: 0.5vh;
 }
 
 
@@ -192,4 +197,124 @@ a:active {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.project-card {
+    display: flex;
+    width: calc(100% - 40px);
+    background-color: rgb(6, 6, 6);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    text-decoration: none;
+}
+
+.project-tag,
+.project-card:hover .project-tag {
+    color: rgb(232, 232, 232);
+}
+
+.project-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: auto;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+.project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.project-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: rgb(232, 232, 232);
+}
+
+.project-description {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    word-wrap: break-word;
+    color: rgb(232, 232, 232);
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-date {
+    font-size: 0.75rem;
+    color: rgb(170,170,170);
+    white-space: nowrap;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.project-tag {
+    background-color: rgb(17,17,17);
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    line-height: 1.2;
 }

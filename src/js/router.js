@@ -7,6 +7,22 @@ const Router = (() => {
     });
   }
 
+  async function runScripts(container) {
+    const scripts = container.querySelectorAll("script");
+
+    scripts.forEach(oldScript => {
+      const newScript = document.createElement("script");
+
+      for (const attr of oldScript.attributes) {
+        newScript.setAttribute(attr.name, attr.value);
+      }
+
+      newScript.textContent = oldScript.textContent;
+
+      oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
+  }
+
   async function loadPage() {
     const params = new URLSearchParams(location.search);
 
@@ -19,6 +35,7 @@ const Router = (() => {
       if (!res.ok) throw new Error();
 
       app.innerHTML = await res.text();
+      runScripts(app);
     } catch {
       const fallback = await fetch(`/src/pages/404.html`);
       app.innerHTML = await fallback.text();
