@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Disallow: /fonts/
+Disallow: /data/
+Disallow: /src/
+Disallow: /js/
+
+Disallow: /archive19.html
+
+Allow: /pages/
+Allow: /img/
+Allow: /web/
+
+Sitemap: https://mellowestmel.com/sitemap.xml
