@@ -317,3 +317,75 @@ br {
     display: block;
     flex: none;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .main-card {
+        width: 100%;
+        min-height: 100dvh;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    header,
+    #app {
+        padding: 12px;
+    }
+
+    .logo,
+    h1,
+    h2,
+    p,
+    input,
+    ul,
+    ol,
+    .navigation-buttons,
+    .project-card {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+    }
+
+    h2 {
+        font-size: 0.95rem;
+        padding: 10px 15px;
+    }
+
+    p,
+    input,
+    ul,
+    ol {
+        padding: 10px 15px;
+    }
+
+    .project-card {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .project-text {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 0.95rem;
+        padding: 10px 14px;
+        white-space: nowrap;
+    }
+
+    .navigation-buttons {
+        padding: 8px;
+    }
+}
