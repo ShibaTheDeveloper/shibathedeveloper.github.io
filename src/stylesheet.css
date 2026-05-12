@@ -1,7 +1,6 @@
 html, body {
-    height: 100dvh;
-    overflow: hidden;
     margin: 0;
+    min-height: 100%;
     font-family: 'Lato', Arial, sans-serif;
     background-color: rgb(0, 0, 0);
     color: #ffffff;
@@ -10,8 +9,8 @@ html, body {
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    align-items: flex-start;
+    padding: 10px 0;
 }
 
 body > *:not(#shootingStarsCanvas) {
@@ -19,12 +18,10 @@ body > *:not(#shootingStarsCanvas) {
     z-index: 1;
 }
 
-
-
 .main-card {
     width: 60%;
     max-width: 800px;
-    height: calc(100% - 20px);
+    min-height: calc(100dvh - 20px);
 
     display: flex;
     flex-direction: column;
@@ -36,8 +33,6 @@ body > *:not(#shootingStarsCanvas) {
 
     box-sizing: border-box;
     border-radius: 8px;
-
-    overflow: hidden;
 
     animation: pageIn 500ms ease-out;
 
@@ -58,7 +53,6 @@ header {
 
 #app {
     flex: 1;
-    overflow: auto;
 }
 
 header,
@@ -102,8 +96,6 @@ input {
     font-size: 1rem;
 }
 
-
-
 ul, ol {
     background-color: rgb(17, 17, 17);
     padding: 10px 20px;
@@ -116,15 +108,11 @@ ul, ol {
     list-style-position: inside;
 }
 
-
-
 img {
     display: block;
     margin: 0 auto;
     border-radius: 8px;
 }
-
-
 
 .navigation-buttons {
     background-color: rgb(6, 6, 6);
@@ -142,8 +130,6 @@ img {
     overflow-x: auto;
     overflow-y: hidden;
 }
-
-
 
 button {
     width: 100%;
@@ -164,8 +150,6 @@ button:active:not(:disabled) {
     transform: scale(0.95);
 }
 
-
-
 a {
     display: inline-block;
     color: rgb(0, 140, 255);
@@ -181,8 +165,6 @@ a:active {
     transform: scale(0.95);
 }
 
-
-
 * {
     transition: transform 300ms ease;
     box-sizing: border-box;
@@ -191,8 +173,6 @@ a:active {
 br {
     margin: 0.5vh;
 }
-
-
 
 @keyframes pageIn {
     from {
@@ -204,8 +184,6 @@ br {
         transform: translateY(0);
     }
 }
-
-
 
 @font-face {
     font-family: 'Lato';
@@ -234,8 +212,6 @@ br {
     font-weight: 700;
     font-style: italic;
 }
-
-
 
 .projects-container {
     display: flex;
