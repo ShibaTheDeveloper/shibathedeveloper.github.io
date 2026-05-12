@@ -1,9 +1,6 @@
-* {
-    text-align: center;
-}
-
 html, body {
-    height: 100%;
+    height: 100dvh;
+    overflow: hidden;
     margin: 0;
     font-family: 'Lato', Arial, sans-serif;
     background-color: rgb(0, 0, 0);
@@ -14,36 +11,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
+
 
 
 
 .main-card {
     width: 60%;
-    max-width: 900px;
-    height: 90vh;
+    max-width: 800px;
+    height: calc(100% - 20px);
 
     display: flex;
     flex-direction: column;
+
     gap: 10px;
-}
 
+    background: transparent;
+    padding: 20px;
 
-
-header,
-#app {
-    background-color: rgb(24, 24, 24);
+    box-sizing: border-box;
     border-radius: 8px;
 
-    padding: 16px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    overflow: hidden;
 }
+
+
+
 
 header {
     flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #app {
@@ -51,11 +51,21 @@ header {
     overflow: auto;
 }
 
+header,
+#app {
+    background-color: rgb(24, 24, 24);
+    border-radius: 8px;
+    padding: 16px;
+}
 
 
-h1, h2, p {
+h1, h2, p, input {
+    border: none;
+    display: block;
     width: calc(100% - 40px);
     margin: 10px auto;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
     border-radius: 8px;
 }
 
@@ -74,36 +84,65 @@ h2 {
 p {
     background-color: rgb(17, 17, 17);
     padding: 10px 20px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-
-
-button {
-    background-color: rgb(6, 6, 6);
-    color: rgb(232, 232, 232);
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 8px;
-    cursor: pointer;
 }
 
 
 
 ul, ol {
-    width: calc(100% - 40px);
-    margin: 10px auto;
-    padding: 10px 20px;
     background-color: rgb(17, 17, 17);
+    padding: 10px 20px;
+    margin: 10px auto;
+    width: calc(100% - 40px);
+
+    box-sizing: border-box;
     border-radius: 8px;
+
     list-style-position: inside;
 }
 
 
 
+.navigation-buttons {
+    background-color: rgb(6, 6, 6);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+
+    width: calc(100% - 40px);
+    margin: 5px auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    padding: 10px;
+}
+
+
+
+button {
+    width: 100%;
+    background-color: rgb(6, 6, 6);
+    color: rgb(232, 232, 232);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(40, 40, 40);
+    transform: scale(1.05);
+}
+
+
+
 a {
+    display: inline-block;
     color: rgb(0, 140, 255);
     text-decoration: none;
+}
+
+
+
+* {
+    box-sizing: border-box;
 }

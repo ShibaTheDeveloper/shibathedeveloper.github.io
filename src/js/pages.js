@@ -18,9 +18,6 @@ const Router = (() => {
       page = "404";
     }
 
-    document.title =
-      page.charAt(0).toUpperCase() + page.slice(1) + " Page";
-
     history.replaceState({}, "", `?page=${page}`);
   }
 
