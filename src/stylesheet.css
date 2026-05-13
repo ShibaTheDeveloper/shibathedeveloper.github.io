@@ -156,7 +156,7 @@ button {
     cursor: pointer;
 }
 
-button:hover, button:disabled {
+button:hover, .navigation-buttons button:disabled {
     background-color: rgb(40, 40, 40);
     transform: scale(1.05);
 }
