@@ -1,6 +1,10 @@
 document.addEventListener("click", (e) => {
-  const btn = e.target.closest("button[data-page]");
-  if (!btn) return;
+  const target = e.target.closest("button[data-page], a[data-page]");
+  if (!target) return;
 
-  Router.navigate(btn.dataset.page);
+  if (target.tagName === "A") {
+    e.preventDefault();
+  }
+
+  Router.navigate(target.dataset.page);
 });

@@ -108,9 +108,15 @@ ul, ol {
     list-style-position: inside;
 }
 
-img {
+img,
+video {
     display: block;
-    margin: 0 auto;
+    max-width: calc(100% - 40px);
+
+    height: auto;
+
+    margin: 10px auto;
+
     border-radius: 8px;
 }
 
