@@ -101,7 +101,7 @@ li {
     margin-bottom: 0.5vh;
 }
 
-li:hover input:hover {
+li:hover {
     transform: scale(1.05)
 }
 
