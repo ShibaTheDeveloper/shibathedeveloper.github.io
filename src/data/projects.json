@@ -48,8 +48,10 @@
         "project-title": "Teapot Tumble",
         "project-description": "A remake of Clockwork's \"Dodge the Teapots of Doom\" (originally released December 15, 2007). Teapot Tumble expands the concept with a shop system, in-game currency, a speedrun timer, and a procedurally generated map that increases in difficulty as more players win.",
         "project-image": "/src/img/projects/teapot-tumble.webp",
+
         "project-link": "https://www.roblox.com/games/88623920231246/Teapot-Tumble",
-        "project-created": "Unknown",
+        "project-created": "February 19, 2025",
+
         "project-tags": ["Roblox", "LuaU", "Discontinued"]
     },
 
