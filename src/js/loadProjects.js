@@ -1,3 +1,17 @@
+function formatDateMDY(dateStr) {
+    const [year, month, day] = dateStr.split("-");
+
+    const months = [
+        "January", "February", "March", "April",
+        "May", "June", "July", "August",
+        "September", "October", "November", "December"
+    ];
+
+    const monthName = months[Number(month) - 1];
+
+    return `${monthName} ${Number(day)}, ${year}`;
+}
+
 function el(tag, props = {}, children = []) {
     const element = document.createElement(tag);
 
@@ -24,7 +38,11 @@ async function loadProjects() {
 
     const fragment = document.createDocumentFragment();
 
-    for (const project of Object.values(projects)) {
+    const sortedProjects = Object.values(projects).sort(
+    (a, b) => new Date(b.created) - new Date(a.created)
+    );
+
+    for (const project of sortedProjects) {
 
         const tags = (project.tags || []).map(tag =>
             el("span", { class: "project-tag", text: tag })
@@ -41,7 +59,7 @@ async function loadProjects() {
             }),
 
             el("div", { class: "project-text" }, [
-                el("h3", {
+                el("div", {
                     class: "project-title",
                     text: project.title
                 }),
@@ -54,7 +72,7 @@ async function loadProjects() {
                 el("div", { class: "project-meta" }, [
                     el("time", {
                         class: "project-date",
-                        text: `Created: ${project.created}`
+                        text: `Created: ${formatDateMDY(project.created)}`
                     }),
 
                     el("div", { class: "project-tags" }, tags)
