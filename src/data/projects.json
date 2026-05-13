@@ -1,79 +1,64 @@
 {
-    "1": {
-        "project-title": "Merge Boxes! 2D",
-        "project-description": "A re-creation of my old Roblox game \"<a href=\"https://www.roblox.com/games/15795590655/Merge-Boxes\">Merge Boxes!</a>\". It is now also an Incremental game as opposed to just a merge game, and it is also made in Love2D! The game is not finished yet, but I'd say it's pretty close!",
-        "project-image": "/src/img/projects/mb2d.webp",
-        "project-link": "https://github.com/MellowestMel/Merge-Boxes-2D",
+  "1": {
+    "title": "Merge Boxes! 2D",
+    "description": "A re-creation of my old Roblox game \"<a href=\"https://www.roblox.com/games/15795590655/Merge-Boxes\">Merge Boxes!</a>\". It is now also an Incremental game as opposed to just a merge game, and it is also made in Love2D! The game is not finished yet, but I'd say it's pretty close!",
+    "image": "/src/img/projects/mb2d.webp",
+    "link": "https://github.com/MellowestMel/Merge-Boxes-2D",
+    "created": "2025-12-13",
+    "tags": ["Love2D", "Lua", "Alpha"]
+  },
 
-        "project-created": "December 13, 2025",
+  "2": {
+    "title": "TBB:TARPG",
+    "description": "My most popular game (1M+ visits across all of its places and peak 183 active players at once.), it is roleplay game based off <a href=\"https://www.roblox.com/communities/9835935/Tumore#!/about\">Tumore</a>'s game named <a href=\"https://www.roblox.com/games/10834586502/The-Battle-Bricks\">The Battle Bricks</a>. I made the game private since I no longer wish to associate myself with them, their games, or their community. If you think this game doesn't exist, click <a data-page=\"tarpg-proof\">here</a> for proof",
+    "image": "/src/img/projects/tarpg.webp",
+    "link": "https://www.roblox.com/games/15148994711/i-dont-wanna-be-affiliated-with-tumore-anymore",
+    "created": "2023-06-18",
+    "tags": ["Roblox", "LuaU", "Discontinued"]
+  },
 
-        "project-tags": ["Love2D", "Lua", "Alpha"]
-    },
+  "3": {
+    "title": "Merge Boxes!",
+    "description": "A not-very-popular merge game where you merge boxes.. yup, that's about it. I had a LOT of fun making this game, which is why it is getting a remake (<a href=\"https://github.com/MellowestMel/Merge-Boxes-2D\">Merge Boxes! 2D</a>)",
+    "image": "/src/img/projects/mb.webp",
+    "link": "https://www.roblox.com/games/15795590655/Merge-Boxes",
+    "created": "2023-12-29",
+    "tags": ["Roblox", "LuaU", "Discontinued"]
+  },
 
-    "2": {
-        "project-title": "TBB:TARPG",
-        "project-description": "My most popular game (1M+ visits across all of its places and peak 183 active players at once.), it is roleplay game based off <a href=\"https://www.roblox.com/communities/9835935/Tumore#!/about\">Tumore</a>'s game named <a href=\"https://www.roblox.com/games/10834586502/The-Battle-Bricks\">The Battle Bricks</a>. I made the game private since I no longer wish to associate myself with them, their games, or their community. If you think this game doesn't exist, click <a data-page=\"tarpg-proof\">here</a> for proof",
-        "project-image": "/src/img/projects/tarpg.webp",
-        "project-link": "https://www.roblox.com/games/15148994711/i-dont-wanna-be-affiliated-with-tumore-anymore",
+  "4": {
+    "title": "mellowestmel.com",
+    "description": "..the website you're on right now, m8.",
+    "image": "/src/img/web/embed.webp",
+    "link": "https://github.com/MellowestMel/mellowestmel.github.io",
+    "created": "2025-02-11",
+    "tags": ["HTML", "JavaScript", "Website"]
+  },
 
-        "project-created": "June 18, 2023",
+  "5": {
+    "title": "Teapot Tumble",
+    "description": "A remake of Clockwork's \"Dodge the Teapots of Doom\" (originally released December 15, 2007). Teapot Tumble expands the concept with a shop system, in-game currency, a speedrun timer, and a procedurally generated map that increases in difficulty as more players win.",
+    "image": "/src/img/projects/tpt.webp",
+    "link": "https://www.roblox.com/games/88623920231246/Teapot-Tumble",
+    "created": "2025-02-19",
+    "tags": ["Roblox", "LuaU", "Discontinued"]
+  },
 
-        "project-tags": ["Roblox", "LuaU", "Discontinued"]
-    },
+  "6": {
+    "title": "Same Day Shipping",
+    "description": "Race against the clock in Same Day Shipping, a fast-paced multiplayer roguelike where every second counts as you rush to deliver packages before time runs out!",
+    "image": "/src/img/projects/sds.webp",
+    "link": "https://www.roblox.com/games/81692255468425/Same-Day-Shipping",
+    "created": "2025-06-25",
+    "tags": ["Roblox", "LuaU", "Discontinued"]
+  },
 
-    "3": {
-        "project-title": "Merge Boxes!",
-        "project-description": "A not-very-popular merge game where you merge boxes.. yup, that's about it. I had a LOT of fun making this game, which is why it is getting a remake (<a href=\"https://github.com/MellowestMel/Merge-Boxes-2D\">Merge Boxes! 2D</a>)",
-        "project-image": "/src/img/projects/mb.webp",
-        "project-link": "https://www.roblox.com/games/15795590655/Merge-Boxes",
-
-        "project-created": "December 29, 2023",
-
-        "project-tags": ["Roblox", "LuaU", "Discontinued"]
-    },
-
-    "4": {
-        "project-title": "mellowestmel.com",
-        "project-description": "..the website you're on right now, m8.",
-        "project-image": "/src/img/web/embed.webp",
-        "project-link": "https://github.com/MellowestMel/mellowestmel.github.io",
-
-        "project-created": "February 11, 2025",
-
-        "project-tags": ["HTML", "JavaScript", "Website"]
-    },
-
-
-    "5": {
-        "project-title": "Teapot Tumble",
-        "project-description": "A remake of Clockwork's \"Dodge the Teapots of Doom\" (originally released December 15, 2007). Teapot Tumble expands the concept with a shop system, in-game currency, a speedrun timer, and a procedurally generated map that increases in difficulty as more players win.",
-        "project-image": "/src/img/projects/tpt.webp",
-
-        "project-link": "https://www.roblox.com/games/88623920231246/Teapot-Tumble",
-        "project-created": "February 19, 2025",
-
-        "project-tags": ["Roblox", "LuaU", "Discontinued"]
-    },
-
-    "6": {
-        "project-title": "Same Day Shipping",
-        "project-description": "Race against the clock in Same Day Shipping, a fast-paced multiplayer roguelike where every second counts as you rush to deliver packages before time runs out!",
-        "project-image": "/src/img/projects/sds.webp",
-
-        "project-link": "https://www.roblox.com/games/81692255468425/Same-Day-Shipping",
-        "project-created": "June 25, 2025",
-
-        "project-tags": ["Roblox", "LuaU", "Discontinued"]
-    },
-
-    "7": {
-        "project-title": "Class Warfare",
-        "project-description": "Welcome to Class Warfare, a free-for-all fighting game where you battle using different morphs called classes. Each class uses Roblox gear from the catalog.",
-        "project-image": "/src/img/projects/cwf.webp",
-
-        "project-link": "https://www.roblox.com/games/15506551128/Class-Warfare",
-        "project-created": "November 30, 2023",
-
-        "project-tags": ["Roblox", "LuaU", "Discontinued"]
-    }
+  "7": {
+    "title": "Class Warfare",
+    "description": "Welcome to Class Warfare, a free-for-all fighting game where you battle using different morphs called classes. Each class uses Roblox gear from the catalog.",
+    "image": "/src/img/projects/cwf.webp",
+    "link": "https://www.roblox.com/games/15506551128/Class-Warfare",
+    "created": "2023-11-30",
+    "tags": ["Roblox", "LuaU", "Discontinued"]
+  }
 }

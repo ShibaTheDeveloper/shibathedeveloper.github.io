@@ -1,55 +1,71 @@
+function el(tag, props = {}, children = []) {
+    const element = document.createElement(tag);
+
+    for (const [key, value] of Object.entries(props)) {
+        if (key === "class") element.className = value;
+        else if (key === "text") element.textContent = value;
+        else if (key === "html") element.innerHTML = value;
+        else element.setAttribute(key, value);
+    }
+
+    for (const child of children) {
+        element.appendChild(child);
+    }
+
+    return element;
+}
+
 async function loadProjects() {
     const response = await fetch('/src/data/projects.json');
     const projects = await response.json();
 
-    const projectsContainer = document.querySelector('.projects-container');
+    const container = document.querySelector('.projects-container');
+    if (!container) return;
+
+    const fragment = document.createDocumentFragment();
 
     for (const project of Object.values(projects)) {
-        const projectCard = document.createElement("a");
-        projectCard.href = project["project-link"];
-        projectCard.className = "project-card searchable";
 
-        projectsContainer.appendChild(projectCard);
+        const tags = (project.tags || []).map(tag =>
+            el("span", { class: "project-tag", text: tag })
+        );
 
-        const projectImage = document.createElement("img");
-        projectImage.src = project["project-image"];
-        projectImage.className = "project-image";
-        projectCard.appendChild(projectImage);
+        const card = el("a", {
+            class: "project-card searchable",
+            href: project.link
+        }, [
+            el("img", {
+                class: "project-image",
+                src: project.image,
+                alt: project.title
+            }),
 
-        const projectText = document.createElement("div");
-        projectText.className = "project-text";
-        projectCard.appendChild(projectText);
+            el("div", { class: "project-text" }, [
+                el("h3", {
+                    class: "project-title",
+                    text: project.title
+                }),
 
-        const projectTitle = document.createElement("div");
-        projectTitle.className = "project-title";
-        projectTitle.textContent = project["project-title"];
-        projectText.appendChild(projectTitle);
+                el("div", {
+                    class: "project-description",
+                    html: project.description
+                }),
 
-        const projectDescription = document.createElement("div");
-        projectDescription.className = "project-description";
-        projectDescription.innerHTML = project["project-description"];
-        projectText.appendChild(projectDescription);
+                el("div", { class: "project-meta" }, [
+                    el("time", {
+                        class: "project-date",
+                        text: `Created: ${project.created}`
+                    }),
 
-        const projectMeta = document.createElement("div");
-        projectMeta.className = "project-meta";
-        projectText.appendChild(projectMeta);
+                    el("div", { class: "project-tags" }, tags)
+                ])
+            ])
+        ]);
 
-        const projectDate = document.createElement("div");
-        projectDate.className = "project-date";
-        projectDate.textContent = `Created: ${project["project-created"]}`;
-        projectMeta.appendChild(projectDate);
-
-        const tagsContainer = document.createElement("div");
-        tagsContainer.className = "project-tags";
-        projectMeta.appendChild(tagsContainer);
-
-        for (const tag of Object.values(project["project-tags"])) {
-            const tagElement = document.createElement("span");
-            tagElement.className = "project-tag";
-            tagElement.textContent = tag;
-            tagsContainer.appendChild(tagElement);
-        }
+        fragment.appendChild(card);
     }
+
+    container.appendChild(fragment);
 }
 
 loadProjects();
