@@ -69,5 +69,14 @@
         "link": "https://www.roblox.com/games/140224794047871/Gearbearers",
         "created": "2026-04-30",
         "tags": ["Roblox", "LuaU", "On Hold"]
+    },
+
+    "9": {
+        "title": "Slime TD",
+        "description": "A tower defense game where you defend your base against waves of slimes using turrets. Development of this project never got far, since it was my first ever Love2D project. It was abandoned after I came up with the idea for <a href=\"https://github.com/mellowestmel/Merge-Boxes-2D\">Merge Boxes! 2D</a>.",
+        "image": "/src/img/projects/sltd.webp",
+        "link": "https://github.com/mellowestmel/Slime-TD/",
+        "created": "2025-08-11",
+        "tags": ["Love2D", "Lua", "Discontinued"]
     }
 }
